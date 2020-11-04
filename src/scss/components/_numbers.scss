@@ -153,6 +153,13 @@
     background: #E7E7E7;
     transition: background-color .2s;
     position: relative;
+
+
+    cursor: pointer;
+
+    .animating & {
+        cursor: default;
+    }
     &:last-child {
         margin-right: 0;
     }

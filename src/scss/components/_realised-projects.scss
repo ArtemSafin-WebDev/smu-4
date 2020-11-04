@@ -1,0 +1,215 @@
+.realised-projects {
+    margin-top: 11rem;
+    margin-bottom: 11rem;
+    position: relative;
+    z-index: 5;
+}
+
+.realised-projects__slider {
+    display: flex;
+
+    .swiper-container {
+        margin: 0;
+        flex-grow: 1;
+        overflow: visible;
+    }
+
+    .swiper-slide {
+        width: 36rem;
+        display: flex;
+        flex-direction: column;
+        transition: opacity .7s, transform .7s, visibility .7s;
+        transform-origin: left center;
+        &:not(.swiper-slide-visible) {
+            opacity: 0;
+            transform: scale(0) translateX(100%);
+            visibility: hidden;
+            transition: opacity .7s, transform .7s, visibility 0s linear .7s;
+        }
+
+
+       
+    }
+
+    .swiper-slide-active ~ .swiper-slide {
+        transform: none !important;
+    }
+}
+
+
+
+
+.realised-projects__slider-left-col {
+    width: 54.6rem;
+    flex-shrink: 0;
+    margin-right: 3px;
+    background-color: var(--blue);
+    color: white;
+    position: relative;
+    z-index: 30;
+}
+
+.realised-projects__slider-right-col {
+    width: 50%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.realised-projects__slider-info {
+    padding: 4rem 5.2rem;
+}
+
+.realised-projects__heading {
+    margin-bottom: 4.2rem;
+}
+
+.realised-projects__text {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    margin-bottom: 9.4rem;
+    font-family: var(--din);
+    &::before {
+        content: '';
+        width: 3rem;
+        height: 0.3rem;
+        background-color: var(--primary-color);
+        flex-shrink: 0;
+        margin-bottom: 1.5rem;
+        display: inline-block;
+    }
+}
+
+.realised-projects__slider-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.realised-projects__show-all-link {
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    text-transform: uppercase;
+    color: white;
+    background: #173071;
+    padding: 2rem;
+    min-height: 10.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.4s, color 0.4s;
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    &:hover {
+        background-color: var(--primary-color);
+    }
+}
+
+.realised-projects__card {
+    color: white;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--blue);
+    position: relative;
+    z-index: 1;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    &:link,
+    &:visited {
+        color: white;
+    }
+}
+
+.realised-projects__card-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 42.29%, #000000 97.97%);
+    }
+}
+
+.realised-projects__card-bg-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    @include objectFitCover();
+}
+
+.realised-projects__card-content {
+    padding-top: 2.5rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-bottom: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.realised-projects__card-date {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    text-transform: uppercase;
+    font-family: var(--din);
+    padding: 0.8rem 1.5rem;
+    background: rgba(27, 55, 127, 0.15);
+    flex-shrink: 0;
+    border-left: 1px solid white;
+    margin-bottom: 0.6rem;
+    align-self: flex-start;
+}
+
+.realised-projects__card-category {
+    align-self: flex-start;
+    background: rgba(27, 55, 127, 0.15);
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.9rem;
+    padding: .55rem 1.5rem;
+    border-left: 1px solid white;
+    font-family: var(--din);
+    margin-bottom: 1.5rem;
+}
+
+.realised-projects__card-title {
+    min-height: 12rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+    font-weight: 400;
+    font-family: var(--din);
+}
+
+.realised-projects__card-digits {
+    font-weight: bold;
+    font-size: 1.9rem;
+    line-height: 2.4rem;
+    font-family: var(--din);
+    margin-top: auto;
+
+    strong {
+        font-weight: 500;
+        font-size: 5.8rem;
+        line-height: 1.1;
+    }
+}

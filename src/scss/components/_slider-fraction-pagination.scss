@@ -1,0 +1,31 @@
+.slider-fraction-pagination {
+    display: flex;
+}
+
+.slider-fraction-pagination__current,
+.slider-fraction-pagination__total {
+    font-size: 2rem;
+    line-height: .8;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+
+.slider-fraction-pagination__current {
+    color: white;
+}
+
+
+.slider-fraction-pagination__divider {
+    height: 3rem;
+    width: 1px;
+    background-color: #fff;
+    transform: rotate(20deg);
+    flex-shrink: 0;
+    margin: 0 .8rem;
+}
+
+.slider-fraction-pagination__total {
+    margin-top: auto;
+}
+

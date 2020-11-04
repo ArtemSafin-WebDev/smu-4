@@ -8,6 +8,7 @@ export default function Numbers() {
         let activeIndex = 0;
         const autoplayTime = 5000;
         let autoplayEnabled = true;
+        let animating = false;
 
         const slides = Array.from(element.querySelectorAll('.numbers__numbers-and-facts-slider-slide'));
         const paginationContainer = element.querySelector('.numbers__numbers-and-facts-slider-pagination');
@@ -20,7 +21,6 @@ export default function Numbers() {
         });
 
         const createPagination = () => {
-           
             if (!paginationContainer) {
                 console.warn('No pagination element');
                 return [];
@@ -57,7 +57,7 @@ export default function Numbers() {
                     bullet.classList.remove('active');
                     gsap.set(bullet, {
                         '--number-progress': 0
-                    })
+                    });
                 });
 
                 bullets[index].classList.add('active');
@@ -74,7 +74,7 @@ export default function Numbers() {
                         }
                     );
                 }
-              
+
                 return bullets[index];
             }
         };
@@ -87,7 +87,14 @@ export default function Numbers() {
             }
             if (initial) {
                 const { digits, words, card } = cards[index];
-                const tl = gsap.timeline();
+                animating = true;
+                element.classList.add('animating');
+                const tl = gsap.timeline({
+                    onComplete: () => {
+                        element.classList.remove('animating');
+                        animating = false;
+                    }
+                });
 
                 tl.fromTo(
                     digits[0].chars,
@@ -111,7 +118,14 @@ export default function Numbers() {
             } else {
                 const oldCard = cards[activeIndex];
                 const newCard = cards[index];
-                const tl = gsap.timeline();
+                animating = true;
+                element.classList.add('animating');
+                const tl = gsap.timeline({
+                    onComplete: () => {
+                        element.classList.remove('animating');
+                        animating = false;
+                    }
+                });
 
                 tl.to(oldCard.words, {
                     yPercent: 100,
@@ -130,8 +144,12 @@ export default function Numbers() {
                             duration: 1
                         }
                     )
-                    .to(
+                    .fromTo(
                         oldCard.digits[0].chars,
+                        {
+                            yPercent: 0,
+                            autoAlpha: 1
+                        },
                         {
                             yPercent: 100,
                             autoAlpha: 0,
@@ -191,22 +209,21 @@ export default function Numbers() {
             }, autoplayTime);
         });
 
-
         bullets.forEach((bullet, bulletIndex) => {
             bullet.addEventListener('click', event => {
                 event.preventDefault();
+                if (animating) return;
                 clearInterval(autoplayTimer);
                 autoplayTimer = null;
                 autoplayEnabled = false;
                 bullets.forEach(bullet => {
                     gsap.set(bullet, {
                         '--number-progress': 0
-                    })
-                })
+                    });
+                });
 
                 setActiveCard(bulletIndex);
-
-            })
-        })
+            });
+        });
     });
 }

@@ -4,6 +4,7 @@ import Intro from './intro';
 import Menu from './menu';
 import Services from './services';
 import Numbers from './numbers';
+import RealisedProjects from './realisedProjects';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -12,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     Menu();
     Services();
     Numbers();
+    RealisedProjects();
 });
 
 window.addEventListener('load', function() {
