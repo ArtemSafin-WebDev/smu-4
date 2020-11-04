@@ -1,0 +1,210 @@
+.services {
+    padding: 8.2rem 0;
+}
+
+.services__top-row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 6.5rem;
+}
+
+.services__top-row-col {
+    width: 50%;
+}
+
+.services__presentation-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2.5rem;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0.8rem;
+        width: 3rem;
+        height: 0.3rem;
+        background-color: var(--primary-color);
+    }
+}
+
+.services__presentation-text {
+    max-width: 35rem;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    font-family: var(--din);
+    margin-right: 2rem;
+    flex-shrink: 0;
+}
+
+.services__content {
+    position: relative;
+    z-index: 1;
+    background-color: var(--blue);
+    color: white;
+}
+
+.services__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.services__list-item {
+    display: flex;
+    flex-direction: column;
+    min-height: 39rem;
+    &:nth-child(1) {
+        width: 100%;
+        border-bottom: 1px solid rgba(white, 0.15);
+        min-height: 44.5rem;
+
+        .services__card-title {
+            font-weight: 500;
+            font-size: 5.2rem;
+            line-height: 6.5rem;
+            max-width: 110rem;
+        }
+
+        .services__card {
+            padding-bottom: 7.5rem;
+        }
+    }
+    &:nth-child(2) {
+        width: 30%;
+        border-right: 1px solid rgba(white, 0.15);
+    }
+    &:nth-child(3) {
+        width: 40%;
+        border-right: 1px solid rgba(white, 0.15);
+        .services__card {
+            padding-left: 4.2rem;
+            padding-right: 4.2rem;
+        }
+    }
+    &:nth-child(4) {
+        width: 30%;
+    }
+}
+
+.services__card {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 5.2rem;
+}
+
+.services__card-title {
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 3.7rem;
+    margin-bottom: 2rem;
+    font-family: var(--din);
+    color: white;
+    transition: color .4s;
+
+    .card-hovered & {
+        color: rgba(white, 0.5);
+    }
+
+    .services__card.active & {
+        color: white;
+    }
+}
+
+.services__card-pluses {
+    margin-top: auto;
+    position: relative;
+}
+
+.services__card-plus-idle {
+    svg {
+        width: 3.4rem;
+        height: 3.4rem;
+        fill: rgba(white, 0.5);
+    }
+
+    transition: opacity 0.4s, visibility 0.4s;
+
+
+    .services__card.active & {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.4s, visibility 0s linear .4s;
+    }
+}
+
+.services__card-plus-active {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5.4rem;
+    height: 5.4rem;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s, visibility 0s linear 0.4s;
+    border-radius: 50%;
+    svg {
+        width: 2rem;
+        height: 2rem;
+        fill: white;
+        flex-shrink: 0;
+    }
+
+    .services__card.active & {
+        transition: opacity 0.4s, visibility 0.4s;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+
+.services__base-image-wrapper,
+.services__card-image-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: var(--overlay-opacity, 0);
+    }
+}
+
+.services__base-image,
+.services__card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    @include objectFitCover();
+}
+
+
+.services__card-image-wrapper {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s, visibility 0s linear 0.6s;
+    .services__card.active & {
+        transition: opacity 0.6s, visibility 0.6s;
+        opacity: 1;
+        visibility: visible;
+    }
+}
