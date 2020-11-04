@@ -1,0 +1,201 @@
+.numbers {
+    margin-top: 12rem;
+    margin-bottom: 11rem;
+}
+
+.numbers__top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 7.5rem;
+}
+
+.numbers__heading {
+    margin-right: 2rem;
+}
+
+.numbers__about-company-link {
+    margin-left: auto;
+}
+
+.numbers__bottom-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.numbers__bottom-left-col {
+    width: 46rem;
+    flex-shrink: 0;
+    margin-right: auto;
+}
+
+.numbers__bottom-right-col {
+    width: 72.8rem;
+    margin-left: 2rem;
+}
+
+.numbers__standards-heading {
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-family: var(--din);
+    margin-bottom: 4.2rem;
+}
+
+.numbers__standards-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -3rem;
+}
+
+.numbers__standards-list-item {
+    margin-right: 8.5rem;
+    margin-bottom: 3rem;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.numbers__standards-card-icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    flex-shrink: 0;
+    @include objectFitContain();
+    margin-bottom: 0.5rem;
+}
+
+.numbers__standards-card-title {
+    font-size: 2.8rem;
+    line-height: 4.1rem;
+    text-transform: uppercase;
+
+    font-weight: 400;
+}
+
+.numbers__standards-card-text {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-family: var(--din);
+}
+
+.numbers__numbers-and-facts-slider-wrapper {
+    position: relative;
+}
+
+.numbers__numbers-and-facts-slider-card {
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    left: 0;
+    top: 0;
+    user-select: none;
+    pointer-events: none;
+}
+
+.numbers__numbers-and-facts-slider-card-digits {
+    font-size: 18rem;
+    line-height: .85;
+    text-transform: uppercase;
+    color: black;
+    opacity: 0;
+    visibility: hidden;
+    &.splitting {
+        opacity: 1;
+        visibility: visible;
+    }
+  
+
+    .char {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+
+    .word {
+        white-space: nowrap;
+    }
+}
+
+.numbers__numbers-and-facts-slider-card-words {
+    font-size: 2.6rem;
+    line-height: 4rem;
+    color: black;
+    text-transform: uppercase;
+    margin-left: 2.5rem;
+    margin-bottom: -1rem;
+    opacity: 0;
+    visibility: hidden;
+    em {
+        font-style: normal;
+        color: var(--primary-color);
+    }
+}
+
+.numbers__numbers-and-facts-slider {
+    position: relative;
+}
+
+.numbers__numbers-and-facts-slider-pagination {
+    position: absolute;
+    right: 0;
+    top: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+
+.numbers__numbers-and-facts-slider-pagination-bullet {
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-right: 1rem;
+    background: #E7E7E7;
+    transition: background-color .2s;
+    position: relative;
+    &:last-child {
+        margin-right: 0;
+    }
+
+
+    &.active {
+        background-color: var(--primary-color);
+    }
+}
+
+
+.numbers__numbers-and-facts-slider-pagination-bullet-progress {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 1.8rem;
+    height: 1.8rem;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity .2s;
+
+    .numbers__numbers-and-facts-slider-pagination-bullet.active & {
+        opacity: 1;
+    }
+    svg {
+        width: 100%;
+        height: 100%;
+        transform: rotate(-90deg);
+        circle {
+            &:nth-child(1) {
+                stroke:transparent;
+            }
+            &:nth-child(2) {
+                transition: stroke-dashoffset 0.2s;
+                stroke-dashoffset: calc(500px - 500px * var(--number-progress, 0));
+               
+                stroke: var(--primary-color);
+            }
+        }
+        
+        
+    }
+}
+
+
+

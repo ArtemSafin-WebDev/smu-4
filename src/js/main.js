@@ -3,6 +3,7 @@ import detectTouch from './detectTouch';
 import Intro from './intro';
 import Menu from './menu';
 import Services from './services';
+import Numbers from './numbers';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -10,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     Intro();
     Menu();
     Services();
+    Numbers();
 });
 
 window.addEventListener('load', function() {
