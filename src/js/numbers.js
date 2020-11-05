@@ -1,6 +1,7 @@
 import Splitting from 'splitting';
 import gsap from 'gsap';
 
+
 export default function Numbers() {
     const elements = Array.from(document.querySelectorAll('.js-numbers'));
 
@@ -200,21 +201,22 @@ export default function Numbers() {
         window.addEventListener('blur', () => {
             clearInterval(autoplayTimer);
             autoplayTimer = null;
+            autoplayEnabled = false;
+            bullets.forEach(bullet => {
+                gsap.set(bullet, {
+                    '--number-progress': 0
+                });
+            });
 
-            // bullets.forEach(bullet => {
-                
-            //     gsap.set(bullet, {
-            //         '--number-progress': 0
-            //     });
-            // });
+           element.classList.add('progress-hidden')
         });
 
-        window.addEventListener('focus', () => {
-            clearInterval(autoplayTimer);
-            autoplayTimer = setInterval(() => {
-                setActiveCard(getNextIndex());
-            }, autoplayTime);
-        });
+        // window.addEventListener('focus', () => {
+        //     clearInterval(autoplayTimer);
+        //     autoplayTimer = setInterval(() => {
+        //         setActiveCard(getNextIndex());
+        //     }, autoplayTime);
+        // });
 
         bullets.forEach((bullet, bulletIndex) => {
             bullet.addEventListener('click', event => {

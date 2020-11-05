@@ -10,9 +10,10 @@
     --max-container-width: 146rem;
     --content-padding: 4rem;
     --primary-color: #ff6000;
+    --primary-color-hover: #e25701;
     --oswald: 'Oswald', sans-serif;
     --din: 'DIN Pro', sans-serif;
-    --blue: #1B377F;
+    --blue: #1b377f;
     --footer-shift-distance: 26.8rem;
 }
 
@@ -20,7 +21,7 @@ html {
     box-sizing: border-box;
     font-size: 10px;
     -webkit-text-size-adjust: 100%;
-   
+
     @include noHighlight();
 }
 
@@ -32,7 +33,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: var(--oswald);
-    color: #130F13;
+    color: #130f13;
 }
 
 main {

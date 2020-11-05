@@ -5,6 +5,7 @@ import Menu from './menu';
 import Services from './services';
 import Numbers from './numbers';
 import RealisedProjects from './realisedProjects';
+import NewsSlider from './newsSlider';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -14,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     Services();
     Numbers();
     RealisedProjects();
+    NewsSlider();
 });
 
 window.addEventListener('load', function() {
