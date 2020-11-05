@@ -3,8 +3,12 @@
     line-height: 7rem;
     font-weight: 400;
     text-transform: uppercase;
-}
 
+    @include breakpoint(mobile) {
+        font-size: 3.2rem;
+        line-height: 3.8rem;
+    }
+}
 
 .contour-text {
     -webkit-text-stroke-width: 1px;

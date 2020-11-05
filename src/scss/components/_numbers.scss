@@ -1,6 +1,15 @@
 .numbers {
     margin-top: 12rem;
     margin-bottom: 11rem;
+    @include breakpoint(mobile) {
+        margin-top: 5.8rem;
+        margin-bottom: 6.6rem;
+
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+    }
 }
 
 .numbers__top-row {
@@ -8,30 +17,64 @@
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 7.5rem;
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        justify-content: initial;
+        display: contents;
+        margin: 0;
+    }
 }
 
 .numbers__heading {
     margin-right: 2rem;
+    @include breakpoint(mobile) {
+        margin: 0;
+        margin-bottom: 1rem;
+    }
 }
 
 .numbers__about-company-link {
     margin-left: auto;
+    @include breakpoint(mobile) {
+        margin: 0;
+        order: 10;
+    }
 }
 
 .numbers__bottom-row {
     display: flex;
     justify-content: space-between;
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        justify-content: initial;
+    }
 }
 
 .numbers__bottom-left-col {
     width: 46rem;
     flex-shrink: 0;
     margin-right: auto;
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-shrink: 0;
+        margin: 0;
+    }
 }
 
 .numbers__bottom-right-col {
     width: 72.8rem;
     margin-left: 2rem;
+    @include breakpoint(mobile) {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+.numbers__standards {
+    @include breakpoint(mobile) {
+        margin-bottom: 4.2rem;
+        margin-top: 3.4rem;
+    }
 }
 
 .numbers__standards-heading {
@@ -40,12 +83,22 @@
     line-height: 2.5rem;
     font-family: var(--din);
     margin-bottom: 4.2rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 2.2rem;
+    }
 }
 
 .numbers__standards-list {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: -3rem;
+    @include breakpoint(mobile) {
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-column-gap: 2.6rem;
+        grid-row-gap: 2.6rem;
+    }
 }
 
 .numbers__standards-list-item {
@@ -53,6 +106,10 @@
     margin-bottom: 3rem;
     &:last-child {
         margin-right: 0;
+    }
+
+    @include breakpoint(mobile) {
+        margin: 0;
     }
 }
 
@@ -80,6 +137,24 @@
 
 .numbers__numbers-and-facts-slider-wrapper {
     position: relative;
+    @include breakpointMF(small-tablet) {
+        display: block;
+        height: auto;
+        width: auto;
+        box-sizing: border-box;
+    }
+}
+
+.numbers__numbers-and-facts-slider-slide {
+    @include breakpointMF(small-tablet) {
+        width: auto;
+        display: block;
+    }
+
+
+    @include breakpoint(mobile) {
+        width: 20rem;
+    }
 }
 
 .numbers__numbers-and-facts-slider-card {
@@ -90,11 +165,17 @@
     top: 0;
     user-select: none;
     pointer-events: none;
+    @include breakpoint(mobile) {
+        position: static;
+        pointer-events: initial;
+        flex-direction: column;
+        align-items: initial;
+    }
 }
 
 .numbers__numbers-and-facts-slider-card-digits {
     font-size: 18rem;
-    line-height: .85;
+    line-height: 0.85;
     text-transform: uppercase;
     color: black;
     opacity: 0;
@@ -103,16 +184,37 @@
         opacity: 1;
         visibility: visible;
     }
-  
 
     .char {
         opacity: 0;
         visibility: hidden;
+        @include breakpoint(mobile) {
+            opacity: 1;
+            visibility: visible;
+        }
     }
-
 
     .word {
         white-space: nowrap;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 10rem;
+        line-height: 1.1;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.numbers__numbers-and-facts-slider-container {
+    @include breakpointMF(small-tablet) {
+        overflow: visible;
+        margin: 0;
+        position: static;
+    }
+
+    @include breakpoint(mobile) {
+        overflow: visible;
     }
 }
 
@@ -129,10 +231,26 @@
         font-style: normal;
         color: var(--primary-color);
     }
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        line-height: 3.2rem;
+        margin: 0;
+        opacity: 1;
+        visibility: visible;
+    }
 }
 
 .numbers__numbers-and-facts-slider {
     position: relative;
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+
+        .swiper-container {
+            margin: 0;
+        }
+    }
 }
 
 .numbers__numbers-and-facts-slider-pagination {
@@ -141,8 +259,28 @@
     top: 1rem;
     display: flex;
     align-items: center;
-}
 
+    @include breakpoint(mobile) {
+        position: static;
+        order: 5;
+        justify-content: center;
+        margin-top: 3rem;
+        .swiper-pagination-bullet {
+            width: 0.8rem;
+            height: 0.8rem;
+            flex-shrink: 0;
+            border-radius: 50%;
+            margin: 0 .5rem;
+            transition: all .2s;
+            outline: none;
+            border: none;
+            &.swiper-pagination-bullet-active {
+                transform: scale(1.3);
+                background-color: var(--primary-color);
+            }
+        }
+    }
+}
 
 .numbers__numbers-and-facts-slider-pagination-bullet {
     width: 0.8rem;
@@ -150,10 +288,9 @@
     border-radius: 50%;
     flex-shrink: 0;
     margin-right: 1rem;
-    background: #E7E7E7;
-    transition: background-color .2s;
+    background: #e7e7e7;
+    transition: background-color 0.2s;
     position: relative;
-
 
     cursor: pointer;
 
@@ -164,12 +301,12 @@
         margin-right: 0;
     }
 
-
     &.active {
         background-color: var(--primary-color);
     }
-}
 
+    
+}
 
 .numbers__numbers-and-facts-slider-pagination-bullet-progress {
     position: absolute;
@@ -179,7 +316,7 @@
     height: 1.8rem;
     transform: translate(-50%, -50%);
     opacity: 0;
-    transition: opacity .2s;
+    transition: opacity 0.2s;
 
     .numbers__numbers-and-facts-slider-pagination-bullet.active & {
         opacity: 1;
@@ -195,19 +332,13 @@
         transform: rotate(-90deg);
         circle {
             &:nth-child(1) {
-                stroke:transparent;
+                stroke: transparent;
             }
             &:nth-child(2) {
-               
                 stroke-dashoffset: calc(500px - 500px * var(--number-progress, 0));
-               
+
                 stroke: var(--primary-color);
             }
         }
-        
-        
     }
 }
-
-
-

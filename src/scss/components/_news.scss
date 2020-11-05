@@ -1,7 +1,9 @@
 .news {
     margin-top: 11rem;
     margin-bottom: 15.8rem;
-  
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .news__top-row {

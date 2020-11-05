@@ -1,11 +1,20 @@
 .page-footer {
     color: white;
+    @include breakpoint(mobile) {
+        background-color: var(--blue);
+        padding-top: 4.8rem;
+    }
 }
 
 .page-footer__contact-us {
     margin-bottom: calc(-1 * var(--footer-shift-distance));
     position: relative;
     z-index: 10;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        padding-bottom: 5rem;
+    }
 }
 
 .page-footer__contact-us-row {
@@ -14,17 +23,33 @@
     background-color: var(--blue);
 
     padding-top: 5.8rem;
+
+    @include breakpoint(mobile) {
+        padding: 0;
+        background-color: transparent;
+        flex-direction: column;
+    }
 }
 
 .page-footer__contact-us-left-col {
     flex-shrink: 0;
     margin-right: 2rem;
+    @include breakpoint(mobile) {
+        flex-shrink: 1;
+        margin: 0;
+    }
 }
 
 .page-footer__contact-us-right-col {
     width: 78.4rem;
     padding-top: 1.5rem;
     margin-left: auto;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        width: 100%;
+        padding: 0;
+    }
 }
 
 .page-footer__contact-us-heading {
@@ -32,12 +57,24 @@
     line-height: 9.5rem;
     text-transform: uppercase;
     font-weight: 400;
+
+    @include breakpoint(mobile) {
+        font-size: 4.8rem;
+        line-height: 1.2;
+        margin-bottom: 3.4rem;
+    }
 }
 
 .page-footer__contact-us-form-row {
     display: flex;
     margin: -2.6rem -1.5rem;
     flex-wrap: wrap;
+
+    @include breakpoint(mobile) {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        margin: 0;
+    }
 }
 
 .page-footer__contact-us-form-left-col,
@@ -45,14 +82,27 @@
     padding: 2.6rem 1.5rem;
     display: flex;
     flex-direction: column;
+
+    @include breakpoint(mobile) {
+        padding: 0;
+        display: contents;
+    }
 }
 
 .page-footer__contact-us-form-left-col {
     width: 40%;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+    }
 }
 
 .page-footer__contact-us-form-right-col {
     width: 60%;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+    }
 }
 
 .page-footer__contact-us-form-wrapper {
@@ -76,6 +126,13 @@
     }
     &:last-child {
         margin-bottom: 0;
+        @include breakpoint(mobile) {
+            margin-bottom: 2rem;
+
+            &:only-child {
+                margin-bottom: 0;
+            }
+        }
     }
 }
 
@@ -101,6 +158,9 @@ textarea.page-footer__contact-us-form-input {
     padding: 1.2rem 2rem;
     padding-right: 4rem;
     resize: none;
+    @include breakpoint(mobile) {
+        height: 16rem;
+    }
 }
 
 .page-footer__contact-us-form-label {
@@ -134,9 +194,14 @@ textarea.page-footer__contact-us-form-input {
     background-color: var(--primary-color);
     color: white;
     text-transform: uppercase;
-    transition: background-color .2s;
+    transition: background-color 0.2s;
     &:hover {
         background-color: var(--primary-color-hover);
+    }
+
+    @include breakpoint(mobile) {
+        order: 5;
+        margin-top: 3.2rem;
     }
 }
 
@@ -150,13 +215,13 @@ textarea.page-footer__contact-us-form-input {
     user-select: none;
     cursor: pointer;
     margin: auto 0;
-    transition: color .2s;
+    transition: color 0.2s;
     &:hover {
         color: white;
+    }
 
-        // .page-footer__contact-us-form-checkbox-mark {
-        //     color: white;
-        // }
+    @include breakpoint(mobile) {
+        margin-top: 3rem;
     }
 }
 
@@ -175,7 +240,7 @@ textarea.page-footer__contact-us-form-input {
     align-items: center;
     justify-content: center;
     margin-top: 0.2rem;
-  
+
     svg {
         width: 0.8rem;
         height: 0.6rem;
@@ -194,6 +259,10 @@ textarea.page-footer__contact-us-form-input {
     padding-top: var(--footer-shift-distance);
     position: relative;
     z-index: 1;
+
+    @include breakpoint(mobile) {
+        padding-top: 5.5rem;
+    }
 }
 
 .page-footer__bottom-panel-bg {
@@ -230,12 +299,25 @@ textarea.page-footer__contact-us-form-input {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    @include breakpoint(mobile) {
+        padding: 0;
+        flex-direction: column;
+        align-items: initial;
+        justify-content: initial;
+        padding-bottom: 4rem;
+    }
 }
 
 .page-footer__bottom-panel-logo {
     margin-right: 8rem;
     display: flex;
     align-items: center;
+    flex-shrink: 0;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        margin-bottom: 3.5rem;
+    }
 }
 
 .page-footer__bottom-panel-logo-image {
@@ -243,12 +325,19 @@ textarea.page-footer__contact-us-form-input {
     height: auto;
     flex-shrink: 0;
     margin-right: 1.6rem;
+    @include breakpoint(mobile) {
+        width: 4rem;
+        margin-right: 1.3rem;
+    }
 }
 
 .page-footer__bottom-panel-logo-text-image {
     width: 7.8rem;
     height: auto;
     flex-shrink: 0;
+    @include breakpoint(mobile) {
+        width: 6.2rem;
+    }
 }
 
 .page-footer__bottom-panel-phone-links {
@@ -264,6 +353,15 @@ textarea.page-footer__contact-us-form-input {
         background-color: var(--primary-color);
         margin-bottom: 2.4rem;
         flex-shrink: 0;
+
+        @include breakpoint(mobile) {
+            margin-bottom: 1.2rem;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        margin-left: 0;
+        margin-bottom: 2.4rem;
     }
 }
 
@@ -284,6 +382,13 @@ textarea.page-footer__contact-us-form-input {
     &:hover {
         color: var(--primary-color);
     }
+
+    @include breakpoint(mobile) {
+        font-size: 2.5rem;
+        line-height: 3.1rem;
+        margin-bottom: .5rem;
+        font-family: var(--din);
+    }
 }
 
 .page-footer__bottom-panel-address-and-email {
@@ -293,6 +398,12 @@ textarea.page-footer__contact-us-form-input {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-shrink: 1;
+        margin: 0;
+        align-items: initial;
+    }
 }
 
 .page-footer__bottom-panel-email-link {
@@ -305,12 +416,23 @@ textarea.page-footer__contact-us-form-input {
     &:visited {
         color: var(--primary-color);
     }
+
+    @include breakpoint(mobile) {
+        font-size: 2.5rem;
+        line-height: 3.1rem;
+        margin-bottom: .5rem;
+    }
 }
 
 .page-footer__bottom-panel-address-text {
     font-size: 1.8rem;
     line-height: 2.4rem;
     font-family: var(--din);
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+        max-width: 26rem;
+    }
 }
 
 .page-footer__bottom-panel-bottom-row {
@@ -319,13 +441,32 @@ textarea.page-footer__contact-us-form-input {
     padding: 3.2rem 0;
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     font-family: var(--din);
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: initial;
+        border: none;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            left: calc((100vw - 100%) / 2 * -1);
+            height: 1px;
+            width: 100vw;
+            background-color: rgba(255, 255, 255, 0.4);
+            top: 0;
+            pointer-events: none;
+        }
+    }
 }
 
 .page-footer__bottom-panel-copyright {
     font-size: 1.2rem;
     line-height: 1.5rem;
     margin-right: 2.4rem;
-    
+    @include breakpoint(mobile) {
+        margin: 0;
+        margin-bottom: 1rem;
+    }
 }
 
 .page-footer__bottom-panel-link {
@@ -333,8 +474,7 @@ textarea.page-footer__contact-us-form-input {
     margin-right: 2.4rem;
     font-size: 1.2rem;
     line-height: 1.5rem;
-    margin-right: 2.4rem;
-   
+  
     &:link,
     &:visited {
         color: white;
@@ -342,6 +482,12 @@ textarea.page-footer__contact-us-form-input {
 
     &:hover {
         color: var(--primary-color);
+    }
+
+    @include breakpoint(mobile) {
+        flex-shrink: 1;
+        margin: 0;
+        margin-bottom: 1rem;
     }
 }
 
@@ -355,13 +501,18 @@ textarea.page-footer__contact-us-form-input {
     &:visited {
         color: white;
     }
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        margin-top: -0.4rem;
+    }
 }
 
 .page-footer__made-by-image {
     width: 6.5rem;
     height: auto;
     position: relative;
-    bottom: -.7rem;
+    bottom: -0.7rem;
     margin-left: 0.6rem;
     flex-shrink: 0;
 }

@@ -3,6 +3,10 @@
     margin-bottom: 11rem;
     position: relative;
     z-index: 5;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .realised-projects__slider {

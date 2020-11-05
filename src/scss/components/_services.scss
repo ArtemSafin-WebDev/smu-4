@@ -1,15 +1,27 @@
 .services {
     margin: 8.2rem 0;
+    @include breakpoint(mobile) {
+        margin-top: 4.9rem;
+        margin-bottom: 5.8rem;
+    }
 }
 
 .services__top-row {
     display: flex;
     align-items: flex-start;
     margin-bottom: 6.5rem;
+    @include breakpoint(mobile) {
+        margin: 0;
+        flex-direction: column;
+        align-items: initial;
+    }
 }
 
 .services__top-row-col {
     width: 50%;
+    @include breakpoint(mobile) {
+        width: 100%;
+    }
 }
 
 .services__presentation-row {
@@ -26,6 +38,16 @@
         width: 3rem;
         height: 0.3rem;
         background-color: var(--primary-color);
+        @include breakpoint(mobile) {
+            top: 3.5rem;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        padding-top: 5.8rem;
+        flex-direction: column;
+        align-items: initial;
+        justify-content: initial;
     }
 }
 
@@ -36,6 +58,24 @@
     font-family: var(--din);
     margin-right: 2rem;
     flex-shrink: 0;
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        margin: 0;
+        flex-shrink: 1;
+        margin-bottom: 3.5rem;
+    }
+}
+
+.services__presentation-btn {
+    @include breakpoint(mobile) {
+        align-self: flex-start;
+
+        .btn__inner-content {
+            padding: 2.1rem 4.2rem;
+        }
+    }
 }
 
 .services__content {
@@ -43,47 +83,65 @@
     z-index: 1;
     background-color: var(--blue);
     color: white;
+    @include breakpoint(mobile) {
+        margin-top: 3.5rem;
+        background-color: transparent;
+    }
 }
 
 .services__list {
     display: flex;
     flex-wrap: wrap;
+    @include breakpoint(mobile) {
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
 }
 
 .services__list-item {
     display: flex;
     flex-direction: column;
-    min-height: 39rem;
-    &:nth-child(1) {
-        width: 100%;
-        border-bottom: 1px solid rgba(white, 0.15);
-        min-height: 44.5rem;
 
-        .services__card-title {
-            font-weight: 500;
-            font-size: 5.2rem;
-            line-height: 6.5rem;
-            max-width: 110rem;
-        }
+    @include breakpointMF(small-tablet) {
+        min-height: 39rem;
+        &:nth-child(1) {
+            width: 100%;
+            border-bottom: 1px solid rgba(white, 0.15);
+            min-height: 44.5rem;
 
-        .services__card {
-            padding-bottom: 7.5rem;
+            .services__card-title {
+                font-weight: 500;
+                font-size: 5.2rem;
+                line-height: 6.5rem;
+                max-width: 110rem;
+            }
+
+            .services__card {
+                padding-bottom: 7.5rem;
+            }
+        }
+        &:nth-child(2) {
+            width: 30%;
+            border-right: 1px solid rgba(white, 0.15);
+        }
+        &:nth-child(3) {
+            width: 40%;
+            border-right: 1px solid rgba(white, 0.15);
+            .services__card {
+                padding-left: 4.2rem;
+                padding-right: 4.2rem;
+            }
+        }
+        &:nth-child(4) {
+            width: 30%;
         }
     }
-    &:nth-child(2) {
-        width: 30%;
-        border-right: 1px solid rgba(white, 0.15);
-    }
-    &:nth-child(3) {
-        width: 40%;
-        border-right: 1px solid rgba(white, 0.15);
-        .services__card {
-            padding-left: 4.2rem;
-            padding-right: 4.2rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 0.5rem;
+        &:last-child {
+            margin-bottom: 0;
         }
-    }
-    &:nth-child(4) {
-        width: 30%;
     }
 }
 
@@ -92,6 +150,13 @@
     flex-direction: column;
     flex-grow: 1;
     padding: 5.2rem;
+
+    @include breakpoint(mobile) {
+        padding: 3.2rem 2.6rem;
+        background-color: var(--blue);
+        position: relative;
+        z-index: 1;
+    }
 }
 
 .services__card-title {
@@ -101,7 +166,7 @@
     margin-bottom: 2rem;
     font-family: var(--din);
     color: white;
-    transition: color .4s;
+    transition: color 0.4s;
 
     .card-hovered & {
         color: rgba(white, 0.5);
@@ -109,6 +174,13 @@
 
     .services__card.active & {
         color: white;
+    }
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 2.4rem;
+        line-height: 2.8rem;
+        margin-bottom: 6.5rem;
     }
 }
 
@@ -126,11 +198,15 @@
 
     transition: opacity 0.4s, visibility 0.4s;
 
-
     .services__card.active & {
         opacity: 0;
         visibility: hidden;
-        transition: opacity 0.4s, visibility 0s linear .4s;
+        transition: opacity 0.4s, visibility 0s linear 0.4s;
+    }
+
+
+    @include breakpoint(mobile) {
+        display: none;
     }
 }
 
@@ -162,8 +238,14 @@
         opacity: 1;
         visibility: visible;
     }
-}
 
+    @include breakpoint(mobile) {
+        opacity: 1;
+        visibility: visible;
+        position: static;
+        transform: none;
+    }
+}
 
 .services__base-image-wrapper,
 .services__card-image-wrapper {
@@ -184,6 +266,15 @@
         height: 100%;
         background-color: black;
         opacity: var(--overlay-opacity, 0);
+        @include breakpoint(mobile) {
+            opacity: var(--overlay-opacity, 0.2);
+        }
+    }
+}
+
+.services__base-image-wrapper {
+    @include breakpoint(mobile) {
+        display: none;
     }
 }
 
@@ -197,7 +288,6 @@
     @include objectFitCover();
 }
 
-
 .services__card-image-wrapper {
     opacity: 0;
     visibility: hidden;
@@ -206,5 +296,12 @@
         transition: opacity 0.6s, visibility 0.6s;
         opacity: 1;
         visibility: visible;
+    }
+
+
+    @include breakpoint(mobile) {
+        opacity: 1;
+        visibility: visible;
+        z-index: -1;
     }
 }

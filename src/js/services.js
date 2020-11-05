@@ -1,4 +1,7 @@
+import { MOBILE_WIDTH } from "./constants";
+
 export default function Services() {
+    if (window.matchMedia(`(max-width: ${MOBILE_WIDTH}px)`).matches) return;
     const elements = Array.from(document.querySelectorAll('.js-services'));
 
     elements.forEach(element => {
