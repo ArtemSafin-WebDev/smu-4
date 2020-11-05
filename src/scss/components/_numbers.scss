@@ -193,7 +193,7 @@
                 stroke:transparent;
             }
             &:nth-child(2) {
-                transition: stroke-dashoffset 0.2s;
+               
                 stroke-dashoffset: calc(500px - 500px * var(--number-progress, 0));
                
                 stroke: var(--primary-color);

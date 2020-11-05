@@ -200,6 +200,13 @@ export default function Numbers() {
         window.addEventListener('blur', () => {
             clearInterval(autoplayTimer);
             autoplayTimer = null;
+
+            // bullets.forEach(bullet => {
+                
+            //     gsap.set(bullet, {
+            //         '--number-progress': 0
+            //     });
+            // });
         });
 
         window.addEventListener('focus', () => {
