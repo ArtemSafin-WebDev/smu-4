@@ -772,20 +772,20 @@
                             </h2>
                         </div>
                         <div class="page-footer__contact-us-right-col">
-                            <form action="/" method="POST" class="page-footer__contact-us-form">
+                            <form action="/" method="POST" class="page-footer__contact-us-form" data-need-validation>
                                 <div class="page-footer__contact-us-form-row">
                                     <div class="page-footer__contact-us-form-left-col">
                                         <div class="page-footer__contact-us-form-wrapper">
                                             <input type="text" class="page-footer__contact-us-form-input" id="name"
-                                                placeholder="Имя">
+                                                placeholder="Имя" required>
                                             <label for="name" class="page-footer__contact-us-form-label">Имя</label>
                                             <svg width="12" height="12" aria-hidden="true" class="icon-form-person">
                                                 <use xlink:href="#form-person" />
                                             </svg>
                                         </div>
                                         <div class="page-footer__contact-us-form-wrapper">
-                                            <input type="tel" class="page-footer__contact-us-form-input" id="phone"
-                                                placeholder="Телефон">
+                                            <input type="tel" class="page-footer__contact-us-form-input js-phone-input" id="phone"
+                                                placeholder="Телефон" required data-parsley-phone>
                                             <label for="phone" class="page-footer__contact-us-form-label">Телефон</label>
                                             <svg width="12" height="12" aria-hidden="true" class="icon-form-phone">
                                                 <use xlink:href="#form-phone" />
@@ -793,7 +793,7 @@
                                         </div>
                                         <div class="page-footer__contact-us-form-wrapper">
                                             <input type="email" class="page-footer__contact-us-form-input" id="email"
-                                                placeholder="E-mail">
+                                                placeholder="E-mail" required>
                                             <label for="email" class="page-footer__contact-us-form-label">E-mail</label>
                                             <svg width="12" height="12" aria-hidden="true" class="icon-form-email">
                                                 <use xlink:href="#form-email" />
@@ -826,7 +826,7 @@
                                     </div>
                                     <div class="page-footer__contact-us-form-right-col">
                                         <label class="page-footer__contact-us-form-checkbox">
-                                            <input type="checkbox" class="page-footer__contact-us-form-checkbox-input">
+                                            <input type="checkbox" name="policy" class="page-footer__contact-us-form-checkbox-input" required>
                                             <span class="page-footer__contact-us-form-checkbox-mark">
                                                 <svg width="12" height="12" aria-hidden="true" class="icon-checkmark">
                                                     <use xlink:href="#checkmark" />

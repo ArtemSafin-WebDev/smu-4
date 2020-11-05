@@ -196,6 +196,16 @@ th {
     vertical-align: top;
 }
 
+
+.parsley-errors-list {
+    font-family: var(--din);
+    font-size: 1.4rem;
+}
+
+.parsley-errors-list.filled {
+    margin-top: .5rem;
+}
+
 .lazyload,
 .lazyloading {
     opacity: 0;

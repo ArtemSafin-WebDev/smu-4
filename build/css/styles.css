@@ -1231,6 +1231,13 @@ th {
   text-align: left;
   vertical-align: top; }
 
+.parsley-errors-list {
+  font-family: var(--din);
+  font-size: 1.4rem; }
+
+.parsley-errors-list.filled {
+  margin-top: .5rem; }
+
 .lazyload,
 .lazyloading {
   opacity: 0; }
@@ -1787,6 +1794,9 @@ select:-webkit-autofill:focus {
         .page-footer__contact-us-form-wrapper:last-child:only-child {
           margin-bottom: 0; } }
 
+.page-footer__contact-us-form-checkbox ~ .parsley-errors-list {
+  display: none; }
+
 .page-footer__contact-us-form-input {
   height: 4.8rem;
   width: 100%;
@@ -1797,7 +1807,11 @@ select:-webkit-autofill:focus {
   padding-left: 2rem;
   padding-right: 4rem;
   font-family: var(--din);
-  color: white; }
+  color: white;
+  -webkit-transition: border-color .2s;
+  transition: border-color .2s; }
+  .page-footer__contact-us-form-input.parsley-error {
+    border-color: var(--primary-color); }
   .page-footer__contact-us-form-input::-webkit-input-placeholder {
     opacity: 0; }
   .page-footer__contact-us-form-input:-moz-placeholder {
@@ -1898,6 +1912,8 @@ textarea.page-footer__contact-us-form-input {
   transition: color 0.2s; }
   .page-footer__contact-us-form-checkbox:hover {
     color: white; }
+  .page-footer__contact-us-form-checkbox.parsley-error .page-footer__contact-us-form-checkbox-mark {
+    color: var(--primary-color); }
   @media only screen and (max-width: 767px) {
     .page-footer__contact-us-form-checkbox {
       margin-top: 3rem; } }

@@ -6,6 +6,8 @@ import Services from './services';
 import Numbers from './numbers';
 import RealisedProjects from './realisedProjects';
 import NewsSlider from './newsSlider';
+import Validation from './validation';
+import PhoneMask from './phoneMask';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -16,6 +18,8 @@ document.addEventListener('DOMContentLoaded', function() {
     Numbers();
     RealisedProjects();
     NewsSlider();
+    Validation();
+    PhoneMask();
 });
 
 window.addEventListener('load', function() {
