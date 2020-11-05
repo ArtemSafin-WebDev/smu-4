@@ -5,7 +5,11 @@
     z-index: 5;
 
     @include breakpoint(mobile) {
-        display: none;
+        margin-top: 6.6rem;
+        margin-bottom: 4rem;
+        background-color: var(--blue);
+        padding-top: 4.2rem;
+        padding-bottom: 5rem;
     }
 }
 
@@ -16,32 +20,45 @@
         margin: 0;
         flex-grow: 1;
         overflow: visible;
+        @include breakpoint(mobile) {
+            flex-grow: 0;
+        }
     }
 
     .swiper-slide {
         width: 36rem;
         display: flex;
         flex-direction: column;
-        transition: opacity .7s, transform .7s, visibility .7s;
+        transition: opacity 0.7s, transform 0.7s, visibility 0.7s;
         transform-origin: left center;
-        &:not(.swiper-slide-visible) {
-            opacity: 0;
-            transform: scale(0) translateX(100%);
-            visibility: hidden;
-            transition: opacity .7s, transform .7s, visibility 0s linear .7s;
+       
+
+        @include breakpointMF(small-tablet) {
+            &:not(.swiper-slide-visible) {
+                opacity: 0;
+                transform: scale(0) translateX(100%);
+                visibility: hidden;
+                transition: opacity 0.7s, transform 0.7s, visibility 0s linear 0.7s;
+            }
         }
 
-
-       
+        @include breakpoint(mobile) {
+            width: 100%;
+        }
     }
 
-    .swiper-slide-active ~ .swiper-slide {
-        transform: none !important;
+  
+
+    @include breakpointMF(small-tablet) {
+        .swiper-slide-active ~ .swiper-slide {
+            transform: none !important;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
     }
 }
-
-
-
 
 .realised-projects__slider-left-col {
     width: 54.6rem;
@@ -51,6 +68,12 @@
     color: white;
     position: relative;
     z-index: 30;
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-shrink: 1;
+        margin: 0;
+        display: contents;
+    }
 }
 
 .realised-projects__slider-right-col {
@@ -58,14 +81,25 @@
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-grow: 0;
+        display: contents;
+    }
 }
 
 .realised-projects__slider-info {
     padding: 4rem 5.2rem;
+    @include breakpoint(mobile) {
+        padding: 0;
+    }
 }
 
 .realised-projects__heading {
     margin-bottom: 4.2rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
 }
 
 .realised-projects__text {
@@ -82,12 +116,19 @@
         margin-bottom: 1.5rem;
         display: inline-block;
     }
+
+    @include breakpoint(mobile) {
+        margin-bottom: 4rem;
+    }
 }
 
 .realised-projects__slider-controls {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .realised-projects__show-all-link {
@@ -111,6 +152,16 @@
     &:hover {
         background-color: var(--primary-color);
     }
+
+    @include breakpoint(mobile) {
+        background-color: var(--primary-color);
+        font-size: 1.3rem;
+        line-height: 1.9rem;
+        padding: 2rem 3.4rem;
+        min-height: auto;
+        order: 10;
+        margin-top: 4.5rem;
+    }
 }
 
 .realised-projects__card {
@@ -127,6 +178,10 @@
     &:link,
     &:visited {
         color: white;
+    }
+
+    @include breakpoint(mobile) {
+        min-height: 56.2rem;
     }
 }
 
@@ -166,6 +221,11 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+
+    @include breakpoint(mobile) {
+        padding-left: 3.4rem;
+        padding-right: 3.4rem;
+    }
 }
 
 .realised-projects__card-date {
@@ -187,7 +247,7 @@
     font-weight: 500;
     font-size: 1.5rem;
     line-height: 1.9rem;
-    padding: .55rem 1.5rem;
+    padding: 0.55rem 1.5rem;
     border-left: 1px solid white;
     font-family: var(--din);
     margin-bottom: 1.5rem;
@@ -202,6 +262,11 @@
     border-top: 1px solid rgba(255, 255, 255, 0.35);
     font-weight: 400;
     font-family: var(--din);
+
+    @include breakpoint(mobile) {
+        padding-left: 3.4rem;
+        padding-right: 3.4rem;
+    }
 }
 
 .realised-projects__card-digits {

@@ -9,11 +9,21 @@ export default function NewsSlider() {
         const container = element.querySelector('.swiper-container');
 
         new Swiper(container, {
-            slidesPerView: 3,
+            slidesPerView: 1,
             watchOverflow: true,
             navigation: {
                 nextEl: element.querySelector('.slider-arrows__btn--next'),
                 prevEl: element.querySelector('.slider-arrows__btn--prev')
+            },
+            pagination: {
+                el: element.querySelector('.news__mobile-pagination'),
+                type: 'bullets',
+                clickable: true
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 3
+                }
             }
         });
     });
