@@ -106,6 +106,7 @@ textarea {
     display: block;
     width: 100%;
     overflow: auto;
+    -webkit-appearance: none;
 }
 
 input::-webkit-outer-spin-button,

@@ -1,5 +1,6 @@
 .slider-fraction-pagination {
     display: flex;
+    width: auto;
 }
 
 .slider-fraction-pagination__current,
@@ -8,11 +9,20 @@
     line-height: .8;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.3);
+
+
+    .slider-fraction-pagination--dark & {
+        color: rgba(0, 0, 0, 0.3);
+    }
 }
 
 
 .slider-fraction-pagination__current {
     color: white;
+
+    .slider-fraction-pagination--dark & {
+        color: #000000;
+    }
 }
 
 
@@ -23,6 +33,9 @@
     transform: rotate(20deg);
     flex-shrink: 0;
     margin: 0 .8rem;
+    .slider-fraction-pagination--dark & {
+        background-color: #000000;
+    }
 }
 
 .slider-fraction-pagination__total {
