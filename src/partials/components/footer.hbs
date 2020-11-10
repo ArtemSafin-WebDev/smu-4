@@ -11,7 +11,7 @@
                     </h2>
                 </div>
                 <div class="page-footer__contact-us-right-col">
-                    <form action="/" method="POST" class="page-footer__contact-us-form" data-need-validation>
+                    <form action="/" method="POST" class="page-footer__contact-us-form" data-need-validation id="contact-form">
                         <div class="page-footer__contact-us-form-row">
                             <div class="page-footer__contact-us-form-left-col">
                                 <div class="page-footer__contact-us-form-wrapper">
@@ -23,8 +23,8 @@
                                     </svg>
                                 </div>
                                 <div class="page-footer__contact-us-form-wrapper">
-                                    <input type="tel" class="page-footer__contact-us-form-input js-phone-input" id="phone"
-                                        placeholder="Телефон" required data-parsley-phone>
+                                    <input type="tel" class="page-footer__contact-us-form-input js-phone-input"
+                                        id="phone" placeholder="Телефон" required data-parsley-phone>
                                     <label for="phone" class="page-footer__contact-us-form-label">Телефон</label>
                                     <svg width="12" height="12" aria-hidden="true" class="icon-form-phone">
                                         <use xlink:href="#form-phone" />
@@ -59,13 +59,16 @@
                                 </div>
                             </div>
                             <div class="page-footer__contact-us-form-left-col">
-                                <button type="submit" class="page-footer__contact-us-form-submit">
-                                    Отправить
+                                <button type="submit" class="btn news__all-link page-footer__contact-us-form-submit">
+                                    <span class="btn__inner-content">
+                                        Отправить
+                                    </span>
                                 </button>
                             </div>
                             <div class="page-footer__contact-us-form-right-col">
                                 <label class="page-footer__contact-us-form-checkbox">
-                                    <input type="checkbox" name="policy" class="page-footer__contact-us-form-checkbox-input" required>
+                                    <input type="checkbox" name="policy"
+                                        class="page-footer__contact-us-form-checkbox-input" required>
                                     <span class="page-footer__contact-us-form-checkbox-mark">
                                         <svg width="12" height="12" aria-hidden="true" class="icon-checkmark">
                                             <use xlink:href="#checkmark" />
@@ -79,6 +82,23 @@
                         </div>
 
                     </form>
+                </div>
+                <div class="page-footer__contact-us-form-success">
+                    <div class="page-footer__contact-us-form-success-content">
+                        <div class="page-footer__contact-us-form-success-large-text">
+                            Спасибо,<br>
+                            <span class="contour-text">
+                                Ваша заявка</span><br>
+                            <span class="contour-text">Отправлена</span>
+                        </div>
+                        <div class="page-footer__contact-us-form-success-small-text">
+                            <p>
+                                В течение нескольких минут вам перезвонит наш сотрудник. Пожалуйста, оставайтесь
+                                на связи.
+
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

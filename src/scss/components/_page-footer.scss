@@ -2,7 +2,7 @@
     color: white;
     @include breakpoint(mobile) {
         background-color: var(--blue);
-        padding-top: 4.8rem;
+       
     }
 }
 
@@ -14,6 +14,7 @@
     @include breakpoint(mobile) {
         margin: 0;
         padding-bottom: 5rem;
+        padding-top: 4.8rem;
     }
 }
 
@@ -21,13 +22,14 @@
     display: flex;
     padding: 7.2rem;
     background-color: var(--blue);
-
+    position: relative;
     padding-top: 5.8rem;
 
     @include breakpoint(mobile) {
         padding: 0;
         background-color: transparent;
         flex-direction: column;
+        position: static;
     }
 }
 
@@ -65,11 +67,13 @@
     }
 }
 
+
+
 .page-footer__contact-us-form-row {
     display: flex;
     margin: -2.6rem -1.5rem;
     flex-wrap: wrap;
-
+  
     @include breakpoint(mobile) {
         flex-wrap: nowrap;
         flex-direction: column;
@@ -108,7 +112,6 @@
 .page-footer__contact-us-form-wrapper {
     margin-bottom: 2rem;
     position: relative;
-  
 
     &--stretchy {
         flex-grow: 1;
@@ -137,7 +140,6 @@
     }
 }
 
-
 .page-footer__contact-us-form-checkbox ~ .parsley-errors-list {
     display: none;
 }
@@ -153,14 +155,12 @@
     padding-right: 4rem;
     font-family: var(--din);
     color: white;
-    transition: border-color .2s;
-
+    transition: border-color 0.2s;
 
     &.parsley-error {
         border-color: var(--primary-color);
     }
 
-   
     @include placeholder {
         opacity: 0;
     }
@@ -201,7 +201,6 @@ textarea.page-footer__contact-us-form-input {
 }
 
 .page-footer__contact-us-form-submit {
-    padding: 2rem 4rem;
     text-align: center;
     font-size: 1.8rem;
     line-height: 2.7rem;
@@ -209,8 +208,13 @@ textarea.page-footer__contact-us-form-input {
     color: white;
     text-transform: uppercase;
     transition: background-color 0.2s;
+
+    .btn__inner-content {
+        padding: 2rem 4rem;
+    }
+
     &:hover {
-        background-color: var(--primary-color-hover);
+        background-color: transparent;
     }
 
     @include breakpoint(mobile) {
@@ -406,7 +410,7 @@ textarea.page-footer__contact-us-form-input {
     @include breakpoint(mobile) {
         font-size: 2.5rem;
         line-height: 3.1rem;
-        margin-bottom: .5rem;
+        margin-bottom: 0.5rem;
         font-family: var(--din);
     }
 }
@@ -440,7 +444,7 @@ textarea.page-footer__contact-us-form-input {
     @include breakpoint(mobile) {
         font-size: 2.5rem;
         line-height: 3.1rem;
-        margin-bottom: .5rem;
+        margin-bottom: 0.5rem;
     }
 }
 
@@ -494,7 +498,7 @@ textarea.page-footer__contact-us-form-input {
     margin-right: 2.4rem;
     font-size: 1.2rem;
     line-height: 1.5rem;
-  
+
     &:link,
     &:visited {
         color: white;
@@ -535,4 +539,70 @@ textarea.page-footer__contact-us-form-input {
     bottom: -0.7rem;
     margin-left: 0.6rem;
     flex-shrink: 0;
+}
+
+.page-footer__contact-us-form-success {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--blue);
+    color: white;
+    background-image: url('../img/success-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 7rem;
+    z-index: 50;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s, visibility 0s linear .3s;
+
+
+    .contact-form-success & {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity .3s, visibility .3s;
+    }
+
+
+    @include breakpoint(mobile) {
+        background-image: none;
+        padding: 3rem var(--content-padding);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      
+    }
+}
+
+.page-footer__contact-us-form-success-content {
+    max-width: 45rem;
+
+    @include breakpoint(mobile) {
+        max-width: none;
+    }
+}
+
+.page-footer__contact-us-form-success-large-text {
+    font-size: 7.6rem;
+    line-height: 9.5rem;
+    margin-bottom: 3.2rem;
+    text-transform: uppercase;
+
+    @include breakpoint(mobile) {
+        font-size: 5rem;
+        line-height: 1.3;
+        margin-bottom: 2rem;
+    }
+}
+
+.page-footer__contact-us-form-success-small-text {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    font-family: var(--din);
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+    }
 }
