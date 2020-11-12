@@ -39,7 +39,7 @@ export default function(accordionElements, openFirst = false) {
 
     function init() {
         accordionElements.forEach(element => {
-            const btn = element.querySelector('.js-accordion-btn');
+            const btns = Array.from(element.querySelectorAll('.js-accordion-btn'));
             const content = element.querySelector('.js-accordion-content');
 
             const handler = function(event) {
@@ -63,11 +63,11 @@ export default function(accordionElements, openFirst = false) {
                     element.classList.remove('active');
                 }
             };
-
-            btn.addEventListener('click', handler);
+            btns.forEach(btn =>  btn.addEventListener('click', handler))
+           
 
             accordionInstances.push({
-                btn,
+                btns,
                 content,
                 handler,
                 element
@@ -83,7 +83,7 @@ export default function(accordionElements, openFirst = false) {
 
     function destroy() {
         accordionInstances.forEach(instance => {
-            instance.btn.removeEventListener('click', instance.handler);
+            instance.btns.forEach(btn => btn.removeEventListener('click', instance.handler));
         });
         accordionInstances = [];
         initialized = false;

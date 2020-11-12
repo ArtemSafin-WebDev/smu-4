@@ -1,0 +1,166 @@
+.efforts {
+    margin-top: 10rem;
+    margin-bottom: 12rem;
+    position: relative;
+
+    @include breakpoint(mobile) {
+        margin: 5rem 0;
+    }
+}
+
+.efforts__row {
+    display: flex;
+    margin: -2rem;
+    @include breakpoint(mobile) {
+        margin: 0;
+        flex-direction: column;
+    }
+}
+
+.efforts__left-column,
+.efforts__right-column {
+    width: 50%;
+    padding: 2rem;
+    @include breakpoint(mobile) {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+.efforts__right-column {
+    padding-top: 4rem;
+    @include breakpoint(mobile) {
+        padding: 0;
+    }
+}
+
+.efforts__left-column {
+    display: flex;
+    flex-direction: column;
+    @include breakpoint(mobile) {
+        margin-bottom: 5rem;
+    }
+}
+
+.efforts__heading {
+    margin-bottom: 3.5rem;
+  
+}
+
+.efforts__text {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    font-family: var(--din);
+    margin-bottom: 3rem;
+    max-width: 38rem;
+    &::before {
+        content: '';
+        width: 3rem;
+        height: 0.3rem;
+        background-color: var(--primary-color);
+        margin-bottom: 2.5rem;
+        display: block;
+        @include breakpoint(mobile) {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        max-width: none;
+        margin-bottom: 1rem;
+    }
+}
+
+.efforts__years {
+    margin-top: auto;
+    user-select: none;
+}
+
+.efforts__years-amount {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    -webkit-text-stroke-color: #b7b7b7;
+    font-size: 9.5rem;
+    line-height: 1.2;
+    @include breakpoint(mobile) {
+        font-size: 7rem;
+        line-height: 1.2;
+    }
+}
+
+.efforts__years-text {
+    font-size: 2.2rem;
+    line-height: 2.7rem;
+    color: var(--blue);
+    font-family: var(--din);
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+}
+
+.efforts__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -5rem -2rem;
+    @include breakpoint(mobile) {
+        margin: -1.5rem;
+    }
+}
+
+.efforts__list-item {
+    width: 50%;
+    padding: 5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    @include breakpoint(mobile) {
+        padding: 1.5rem;
+        width: 100%;
+    }
+    
+}
+
+.efforts__card {
+    display: flex;
+    flex-direction: column;
+    @include breakpoint(mobile) {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.efforts__card-icon {
+    width: 6rem;
+    height: 6rem;
+    flex-shrink: 0;
+    margin-bottom: 4.5rem;
+    @include objectFitContain();
+
+    @include breakpoint(mobile) {
+        width: 5rem;
+        height: 5rem;
+        margin: 0;
+        margin-right: 2rem;
+    }
+}
+
+.efforts__card-text {
+    font-weight: 500;
+    font-size: 2.2rem;
+    line-height: 2.7rem;
+    font-family: var(--din);
+    color: var(--blue);
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.2;
+        width: 50%;
+        flex-grow: 1;
+
+        br {
+            display: none;
+        }
+    }
+}

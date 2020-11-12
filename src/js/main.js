@@ -9,6 +9,7 @@ import NewsSlider from './newsSlider';
 import Validation from './validation';
 import PhoneMask from './phoneMask';
 import ContractorsSlider from './contractorsSlider';
+import JoinAccordions from './joinAccordions';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -22,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
     Validation();
     PhoneMask();
     ContractorsSlider();
+    JoinAccordions();
 });
 
 window.addEventListener('load', function() {

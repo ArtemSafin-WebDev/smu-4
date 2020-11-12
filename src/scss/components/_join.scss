@@ -1,0 +1,339 @@
+.join {
+    background-color: var(--blue);
+    color: white;
+    padding-top: 18.9rem;
+    margin-top: 12rem;
+    margin-bottom: 12rem;
+    padding-bottom: 7.5rem;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    @include breakpoint(mobile) {
+        margin: 5rem 0;
+        padding-top: 7rem;
+        padding-bottom: 2rem;
+    }
+}
+
+.join__bg {
+    position: absolute;
+    z-index: -1;
+    position: absolute;
+    top: 11.2rem;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    mask-image: radial-gradient(34.17% 50% at 60% 50%, rgba(0, 0, 0, 0.64) 0%, rgba(0, 0, 0, 0) 100%);
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        padding-bottom: 70%;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(34.17% 50% at 60% 50%, rgba(27, 55, 127, 0.64) 0%, #1b377f 100%);
+
+        @supports ((mask-repeat: no-repeat) or (-webkit-mask-repeat: no-repeat)) {
+            display: none;
+        }
+    }
+}
+
+.join__bg-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    @include objectFitCover();
+}
+
+.join__content {
+    margin-bottom: 16rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 4rem;
+    }
+}
+
+.join__heading {
+    margin-bottom: 5.5rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
+}
+
+.join__text {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    margin-bottom: 8.5rem;
+    max-width: 38rem;
+    font-family: var(--din);
+    &::before {
+        content: '';
+        display: block;
+        background-color: var(--primary-color);
+        width: 3rem;
+        height: 0.3rem;
+        margin-bottom: 2.5rem;
+        flex-shrink: 0;
+        @include breakpoint(mobile) {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        max-width: none;
+        margin-bottom: 4rem;
+    }
+}
+
+.join__headhunter-link {
+    border: 1px solid white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+    text-transform: uppercase;
+    flex-shrink: 0;
+    align-self: flex-start;
+    padding: 2.2rem 7.8rem;
+    transition: background-color 0.2s, color 0.2s;
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    &:hover {
+        background-color: white;
+        color: #d81921;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        line-height: 1.2;
+        padding: 1.8rem 2.4rem;
+        width: 100%;
+    }
+}
+
+.join__headhunter-link-logo {
+    flex-shrink: 0;
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1.4rem;
+    @include objectFitContain();
+
+    @include breakpoint(mobile) {
+        width: 2.4rem;
+        height: 2.4rem;
+        margin-right: 1rem;
+    }
+}
+
+.join__vacancies-list-item {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.join__vacancies-card {
+    display: flex;
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
+    @include breakpoint(mobile) {
+        padding: 4rem 0;
+        flex-direction: column;
+        position: relative;
+    }
+}
+
+.join__vacancies-card-left-col {
+    width: 50rem;
+    flex-shrink: 0;
+    margin-right: 4.4rem;
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-shrink: 1;
+        margin: 0;
+        margin-bottom: 2rem;
+    }
+}
+
+.join__vacancies-card-right-col {
+    width: 50%;
+    flex-grow: 1;
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-grow: 0;
+    }
+}
+
+.join__vacancies-card-name {
+    font-size: 3.8rem;
+    line-height: 5.6rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    cursor: pointer;
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        line-height: 1.3;
+        padding-right: 6rem;
+    }
+}
+
+.join__vacancies-card-right-col {
+    display: flex;
+    padding-top: 1rem;
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        padding: 0;
+    }
+}
+
+.join__vacancies-card-city {
+    width: 16rem;
+    margin-right: 4rem;
+    flex-shrink: 0;
+    font-family: var(--din);
+    cursor: pointer;
+    @include breakpoint(mobile) {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 2rem;
+    }
+}
+
+.join__vacancies-card-description {
+    width: 40%;
+    flex-grow: 1;
+    overflow: hidden;
+    max-height: 4rem;
+    transition: max-height 0.6s ease;
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-grow: 0;
+        max-height: 4rem;
+    }
+}
+
+.join__vacancies-card-description-inner {
+}
+
+.join__vacancies-card-description-content {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    color: #8d9bbf;
+    font-family: var(--din);
+    p {
+        margin-bottom: 2.5rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include breakpoint(mobile) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    em {
+        font-style: normal;
+        color: white;
+        font-weight: 500;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.3;
+    }
+}
+
+.join__vacancies-card-apply-link {
+    font-size: 2.4rem;
+    line-height: 1.2;
+    align-self: flex-start;
+    margin-top: 7.5rem;
+    .btn__inner-content {
+        padding: 2.6rem 7.6rem;
+        @include breakpoint(mobile) {
+            padding: 2rem 4rem;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        line-height: 2.7rem;
+        margin-top: 3rem;
+        width: 100%;
+    }
+}
+
+.join__vacancies-card-plus-icon {
+    flex-shrink: 0;
+    margin-left: 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 2.2rem;
+    height: 2.2rem;
+    cursor: pointer;
+    &::before,
+    &::after {
+        content: '';
+        width: 2.2rem;
+        height: 0.3rem;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #8d9bbf;
+        transition: transform 0.3s, background-color 0.3s;
+        z-index: 2;
+    }
+
+    &::after {
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
+
+    .join__vacancies-card.active & {
+        .join__vacancies-card-plus-icon-bg {
+            opacity: 1;
+        }
+        &::before,
+        &::after {
+            background-color: var(--primary-color);
+        }
+        &::after {
+            transform: translate(-50%, -50%) rotate(90deg) scaleX(0);
+        }
+    }
+
+    @include breakpoint(mobile) {
+        position: absolute;
+        right: 1rem;
+        top: 4.2rem;
+    }
+}
+
+.join__vacancies-card-plus-icon-bg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s;
+    z-index: 1;
+    opacity: 0;
+}

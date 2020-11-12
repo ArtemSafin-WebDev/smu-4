@@ -6,7 +6,7 @@
     text-align: center;
     flex-shrink: 0;
     color: white;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     align-items: flex-start;
@@ -39,7 +39,7 @@
     }
 
     &:hover {
-        background-color: #fff;
+        background-color: transparent;
         color: var(--primary-color);
         &::before,
         &::after {
