@@ -11,7 +11,7 @@ function openAccordeon(element) {
     element && element.scrollTop;
 
     const transitionEndHandler = () => {
-        console.log('Tranisitionnd Initiated');
+    
         element.style.maxHeight = 'none';
         element.removeEventListener('transitionend', transitionEndHandler);
         animating = false;
@@ -33,7 +33,7 @@ function closeAccordeon(element) {
     // ScrollTrigger.refresh(true);
 }
 
-export default function(accordionElements, openFirst = false) {
+export default function(accordionElements, indexToOpenFirst) {
     const accordionInstances = [];
     let initialized = false;
 
@@ -74,8 +74,11 @@ export default function(accordionElements, openFirst = false) {
             });
         });
 
-        if (openFirst && accordionInstances.length) {
-            accordionInstances[0].btn.click();
+        if (typeof indexToOpenFirst !== 'undefined' && indexToOpenFirst !== -1 && accordionInstances[indexToOpenFirst]) {
+           
+            accordionInstances[indexToOpenFirst].btns[0].click();
+        } else {
+            if (typeof indexToOpenFirst !== 'undefined') console.warn('No element to open first has been found');
         }
 
         initialized = true;

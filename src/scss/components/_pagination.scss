@@ -1,0 +1,38 @@
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.pagination__slider {
+    display: flex;
+    align-items: center;
+}
+
+.pagination__slider-wrapper {
+    width: 12rem;
+    flex-shrink: 0;
+    margin-left: auto;
+    margin-right: 2rem;
+}
+
+
+.pagination__slider-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    flex-shrink: 0;
+    transition: color .2s;
+    &:link,
+    &:visited {
+        color: #C5C5C5;
+    }
+
+    &.active,
+    &:hover {
+        color: black;
+    }
+}

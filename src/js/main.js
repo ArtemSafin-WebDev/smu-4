@@ -10,6 +10,9 @@ import Validation from './validation';
 import PhoneMask from './phoneMask';
 import ContractorsSlider from './contractorsSlider';
 import JoinAccordions from './joinAccordions';
+import LotsCardImageSlider from './lotsCardImageSlider';
+import LotsAccordions from './lotsAccordions';
+import PaginationSlider from './paginationSlider';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -24,6 +27,9 @@ document.addEventListener('DOMContentLoaded', function() {
     PhoneMask();
     ContractorsSlider();
     JoinAccordions();
+    LotsCardImageSlider();
+    LotsAccordions();
+    PaginationSlider();
 });
 
 window.addEventListener('load', function() {

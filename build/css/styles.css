@@ -5162,3 +5162,587 @@ textarea.page-footer__contact-us-form-input {
   transition: opacity 0.3s;
   z-index: 1;
   opacity: 0; }
+
+.lots {
+  padding-top: 7.4rem;
+  background: #f7f7f7;
+  color: black;
+  margin-bottom: calc(-1 * var(--footer-shift-distance));
+  padding-bottom: var(--footer-shift-distance); }
+  @media only screen and (max-width: 767px) {
+    .lots {
+      margin: 0;
+      padding-bottom: 4rem;
+      padding-top: 4rem; } }
+
+.lots__layout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  @media only screen and (max-width: 767px) {
+    .lots__layout {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+
+.lots__sidebar {
+  width: 33.4rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-right: 3.2rem; }
+  @media only screen and (max-width: 767px) {
+    .lots__sidebar {
+      width: 100%;
+      margin: 0;
+      -ms-flex-negative: 1;
+          flex-shrink: 1;
+      margin-bottom: 4rem; } }
+
+.lots__main {
+  width: 50%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+  @media only screen and (max-width: 767px) {
+    .lots__main {
+      width: 100%;
+      -webkit-box-flex: 0;
+          -ms-flex-positive: 0;
+              flex-grow: 0; } }
+
+.lots__section-heading {
+  font-size: 2.8rem;
+  line-height: 4.1rem;
+  margin-bottom: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 400; }
+  @media only screen and (max-width: 767px) {
+    .lots__section-heading {
+      margin-bottom: 2.4rem; } }
+
+.lots__list-item {
+  margin-bottom: 2rem; }
+  .lots__list-item:last-child {
+    margin-bottom: 0; }
+
+.lots__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+  color: black; }
+  .lots__card:link, .lots__card:visited {
+    color: black; }
+  @media only screen and (max-width: 767px) {
+    .lots__card {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+
+.lots__card-price {
+  color: #1b377f;
+  font-family: var(--din); }
+
+.lots__card-price-text {
+  font-size: 1.8rem;
+  line-height: 2.2rem; }
+  @media only screen and (max-width: 767px) {
+    .lots__card-price-text {
+      font-size: 1.6rem;
+      line-height: 1.2; } }
+
+.lots__card-price-amount {
+  font-weight: 500;
+  font-size: 3.1rem;
+  line-height: 3.8rem;
+  margin-bottom: 2rem; }
+  @media only screen and (max-width: 767px) {
+    .lots__card-price-amount {
+      font-size: 2.6rem;
+      line-height: 1.2; } }
+
+.lots__card-details-link {
+  padding: 1.7rem 3.4rem;
+  border: 1px solid #1b377f;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.8rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: #1b377f;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-top: auto;
+  -webkit-transition: color 0.2s, background-color 0.2s;
+  transition: color 0.2s, background-color 0.2s; }
+  .lots__card-details-link:link, .lots__card-details-link:visited {
+    color: #1b377f; }
+  .lots__card-details-link:hover {
+    background-color: #1b377f;
+    color: white; }
+  @media only screen and (max-width: 767px) {
+    .lots__card-details-link {
+      font-size: 1.6rem;
+      padding: 1.6rem 2.8rem; } }
+
+.lots__card-image-block {
+  position: relative;
+  width: 36.4rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  background-color: #f2f2f2;
+  -ms-flex-item-align: stretch;
+      align-self: stretch; }
+  .lots__card-image-block::after {
+    content: '';
+    padding-bottom: 60%;
+    display: block;
+    width: 100%; }
+  @media only screen and (max-width: 767px) {
+    .lots__card-image-block {
+      width: 100%;
+      -ms-flex-negative: 1;
+          flex-shrink: 1; } }
+
+.lots__card-image-slider {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+  .lots__card-image-slider .swiper-container,
+  .lots__card-image-slider .swiper-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0; }
+
+.lots__card-image-slider-pagination {
+  position: absolute;
+  bottom: 1.5rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 40; }
+  .lots__card-image-slider-pagination .swiper-pagination-bullet {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.5);
+    width: 0.8rem;
+    height: 0.8rem;
+    margin: 0.3rem;
+    opacity: 1;
+    -webkit-transition: background-color 0.2s;
+    transition: background-color 0.2s; }
+    .lots__card-image-slider-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+      background-color: #fff;
+      opacity: 1; }
+
+.lots__card-image-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+  .lots__card-image-container::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(49.85%, rgba(0, 0, 0, 0)), color-stop(143.43%, #000000));
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 49.85%, #000000 143.43%);
+    z-index: 10; }
+
+.lots__card-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  font-family: 'object-fit: cover; object-position: center;'; }
+
+.lots__card-main-content {
+  width: 50%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 3rem 3.5rem; }
+  @media only screen and (max-width: 767px) {
+    .lots__card-main-content {
+      padding: 1.8rem;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      width: 100%;
+      -webkit-box-flex: 0;
+          -ms-flex-positive: 0;
+              flex-grow: 0; } }
+
+.lots__card-main-content-left-col {
+  width: 60%;
+  padding-right: 5.4rem;
+  border-right: 1px solid #d1d7e5; }
+  @media only screen and (max-width: 767px) {
+    .lots__card-main-content-left-col {
+      border: none;
+      padding: 0;
+      padding-bottom: 2.4rem;
+      border-bottom: 1px solid #d1d7e5;
+      width: 100%; } }
+
+.lots__card-main-content-right-col {
+  width: 40%;
+  padding-left: 5.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  @media only screen and (max-width: 767px) {
+    .lots__card-main-content-right-col {
+      width: 100%;
+      padding: 0;
+      padding-top: 2rem; } }
+
+.lots__card-tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1.2rem; }
+  @media only screen and (max-width: 767px) {
+    .lots__card-tags {
+      margin-bottom: 1.8rem; } }
+
+.lots__card-tag {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.9rem;
+  font-family: var(--din);
+  padding: 0.4rem 1.1rem;
+  background-color: #f3f5f8;
+  color: #1b377f;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-right: 0.6rem;
+  border-left: 1px solid #1b377f; }
+  .lots__card-tag:last-child {
+    margin-right: 0; }
+
+.lots__card-heading {
+  font-weight: 500;
+  font-size: 2.8rem;
+  line-height: 3.5rem;
+  font-family: var(--din);
+  margin-bottom: 1.4rem; }
+  @media only screen and (max-width: 767px) {
+    .lots__card-heading {
+      font-size: 2.2rem;
+      line-height: 1.2; } }
+
+.lots__results {
+  margin-bottom: 4rem; }
+  @media only screen and (max-width: 767px) {
+    .lots__results {
+      margin-bottom: 3rem; } }
+
+.lots__card-details-list {
+  margin: -0.8rem -2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  @media only screen and (max-width: 767px) {
+    .lots__card-details-list {
+      margin: -0.5rem -2rem; } }
+
+.lots__card-details-list-item {
+  width: 50%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.8rem 2.5rem; }
+  @media only screen and (max-width: 767px) {
+    .lots__card-details-list-item {
+      padding: 0.5rem 2rem; } }
+
+.lots__card-details-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.lots__card-details-card-key {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  margin-bottom: 0.4rem;
+  font-family: var(--din);
+  color: #b8b8b8; }
+  @media only screen and (max-width: 767px) {
+    .lots__card-details-card-key {
+      font-size: 1.4rem;
+      line-height: 1.2; } }
+
+.lots__card-details-card-value {
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  font-family: var(--din); }
+  @media only screen and (max-width: 767px) {
+    .lots__card-details-card-value {
+      font-size: 1.6rem;
+      line-height: 1.2; } }
+
+.lots__card-details-rating {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  vertical-align: baseline;
+  margin-left: 0.5rem; }
+  .lots__card-details-rating svg {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    width: 1.4rem;
+    height: 1.4rem;
+    fill: #f2f2f2;
+    margin-right: 0.4rem; }
+    .lots__card-details-rating svg:last-child {
+      margin-right: 0; }
+    .lots__card-details-rating svg.icon-star--filled {
+      fill: #f9d51b; }
+
+.lots__navigation-accordion {
+  background-color: #fff;
+  color: #1b377f; }
+
+.lots__navigation-accordion-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 2.4rem 2.2rem;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  position: relative;
+  font-size: 2rem;
+  line-height: 1.2;
+  font-family: var(--din);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer; }
+  .lots__navigation-accordion-button::after {
+    content: '';
+    position: absolute;
+    left: 2.2rem;
+    top: 0;
+    right: 2.2rem;
+    height: 1px;
+    background-color: #e9ebf3;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; }
+  .lots__navigation-accordion.active .lots__navigation-accordion-button {
+    background-color: #edeff5; }
+    .lots__navigation-accordion.active .lots__navigation-accordion-button::after {
+      left: 0;
+      right: 0; }
+  @media only screen and (max-width: 767px) {
+    .lots__navigation-accordion-button {
+      font-size: 1.8rem;
+      padding-top: 1.8rem;
+      padding-bottom: 1.8rem; } }
+
+.lots__navigation-accordion-button-icon {
+  width: 1.8rem;
+  height: 1.8rem;
+  margin-right: 1.5rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  fill: currentColor;
+  margin-top: 0.35rem; }
+  @media only screen and (max-width: 767px) {
+    .lots__navigation-accordion-button-icon {
+      margin-top: 0.22rem; } }
+
+.lots__navigation-accordion-button-text {
+  width: 40%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+
+.lots__navigation-accordion-button-arrow {
+  width: 1.3rem;
+  height: 1.3rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-left: 1.4rem;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  margin-top: 0.7rem; }
+  .lots__navigation-accordion.active .lots__navigation-accordion-button-arrow {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); }
+  @media only screen and (max-width: 767px) {
+    .lots__navigation-accordion-button-arrow {
+      margin-top: 0.6rem; } }
+
+.lots__navigation-accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.4s;
+  transition: max-height 0.4s; }
+
+.lots__navigation-accordion-content-inner {
+  padding: 2.8rem 2.2rem;
+  padding-bottom: 3.2rem; }
+  @media only screen and (max-width: 767px) {
+    .lots__navigation-accordion-content-inner {
+      padding-top: 2.2rem;
+      padding-bottom: 2.6rem; } }
+
+.lots__navigation-list-item {
+  margin-bottom: 1.5rem; }
+  .lots__navigation-list-item:last-child {
+    margin-bottom: 0; }
+
+.lots__navigation-link {
+  color: black;
+  padding-left: 3rem;
+  position: relative;
+  font-size: 1.6rem;
+  font-family: var(--din);
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s; }
+  .lots__navigation-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.9rem;
+    width: 1.4rem;
+    height: 0.2rem;
+    background-color: var(--primary-color);
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+    opacity: 0;
+    pointer-events: none; }
+  .lots__navigation-link:link, .lots__navigation-link:visited {
+    color: black; }
+  .lots__navigation-list-item.active .lots__navigation-link {
+    color: var(--primary-color); }
+    .lots__navigation-list-item.active .lots__navigation-link::before {
+      opacity: 1; }
+  .lots__navigation-link:hover {
+    color: var(--primary-color); }
+
+.lots__pagination {
+  margin-bottom: 9.2rem; }
+  @media only screen and (max-width: 767px) {
+    .lots__pagination {
+      margin-bottom: 0rem; } }
+
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.pagination__slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.pagination__slider-wrapper {
+  width: 12rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-left: auto;
+  margin-right: 2rem; }
+
+.pagination__slider-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-transition: color .2s;
+  transition: color .2s; }
+  .pagination__slider-link:link, .pagination__slider-link:visited {
+    color: #C5C5C5; }
+  .pagination__slider-link.active, .pagination__slider-link:hover {
+    color: black; }
