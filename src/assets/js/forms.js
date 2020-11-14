@@ -13,4 +13,19 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         })
     }
+
+    var buyForm = document.querySelector('#buy-form');
+    if (buyForm) {
+        buyForm.addEventListener('submit', function(event) {
+            if ($(buyForm).parsley().isValid()) {
+                event.preventDefault();
+                document.body.classList.add('buy-form-success');
+                buyForm.reset();
+                setTimeout(function() {
+                    document.body.classList.remove('buy-form-success');
+                }, 4000);
+            }
+        })
+    }
+
 })

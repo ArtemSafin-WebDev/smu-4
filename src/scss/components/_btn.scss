@@ -13,6 +13,7 @@
     position: relative;
     background-color: var(--primary-color);
     transition: background-color 0.3s, color 0.3s;
+    outline: none;
     &:link,
     &:visited {
         color: white;
@@ -54,8 +55,21 @@
         }
     }
 
+    &:focus-visible {
+        background-color: transparent;
+        color: var(--primary-color);
+        &::before,
+        &::after {
+            transform: scaleX(1);
+        }
 
-   
+        .btn__inner-content {
+            &::before,
+            &::after {
+                transform: scaleY(1);
+            }
+        }
+    }
 }
 
 .btn__inner-content {
@@ -66,8 +80,6 @@
     position: relative;
     flex-grow: 1;
     @include breakpoint(mobile) {
-    
-       
         padding: 2rem 4rem;
     }
 
@@ -85,7 +97,7 @@
         width: 1px;
         height: 100%;
         position: absolute;
-        transition: transform .5s linear;
+        transition: transform 0.5s linear;
         background: var(--primary-color);
         transform: scaleY(0);
         backface-visibility: hidden;

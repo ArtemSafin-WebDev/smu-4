@@ -1,0 +1,96 @@
+<div class="modals">
+    <div class="modals__modal js-modal" id="buy-modal">
+        <div class="modals__modal-inner">
+            <button class="modals__modal-close js-modal-close">
+                <svg width="22" height="22" aria-hidden="true" class="icon-cross">
+                    <use xlink:href="#cross" />
+                </svg>
+            </button>
+            <div class="modals__buy-modal">
+                <div class="modals__buy-modal-left-col">
+                    <div class="modals__buy-modal-image-container">
+                        <img src="img/buy-modal.jpg" alt="" class="modals__buy-modal-image">
+                    </div>
+                    <div class="modals__buy-modal-type">
+                        Бульдозер
+                    </div>
+                    <h4 class="modals__buy-modal-name">
+                        CATERPILLAR - D5H LGP
+                    </h4>
+                    <div class="modals__buy-modal-price">
+                        9 400 000 ₽
+                    </div>
+                </div>
+                <div class="modals__buy-modal-right-col">
+                    <h3 class="modals__buy-modal-heading">
+                        заявка на покупку
+                    </h3>
+                    <form method="POST" action="/" class="modals__buy-modal-form" data-need-validation id="buy-form">
+                        <div class="modals__buy-modal-form-input-wrapper">
+                            <input type="text" class="modals__buy-modal-form-input" id="buy-name" placeholder="Имя"
+                                required>
+                            <label for="buy-name" class="modals__buy-modal-form-label">Имя</label>
+                            <svg width="12" height="12" aria-hidden="true" class="icon-form-person">
+                                <use xlink:href="#form-person" />
+                            </svg>
+                        </div>
+                        <div class="modals__buy-modal-form-input-wrapper">
+                            <input type="tel" class="modals__buy-modal-form-input js-phone-input" id="buy-phone"
+                                placeholder="Телефон" required data-parsley-phone>
+                            <label for="buy-phone" class="modals__buy-modal-form-label">Телефон</label>
+                            <svg width="12" height="12" aria-hidden="true" class="icon-form-phone">
+                                <use xlink:href="#form-phone" />
+                            </svg>
+                        </div>
+                        <div class="modals__buy-modal-form-input-wrapper">
+                            <input type="email" class="modals__buy-modal-form-input" id="buy-email" placeholder="E-mail"
+                                required>
+                            <label for="buy-email" class="modals__buy-modal-form-label">E-mail</label>
+                            <svg width="12" height="12" aria-hidden="true" class="icon-form-email">
+                                <use xlink:href="#form-email" />
+                            </svg>
+                        </div>
+                        <div class="modals__buy-modal-form-input-wrapper">
+                            <label class="modals__buy-modal-form-checkbox">
+                                <input type="checkbox" name="policy" class="modals__buy-modal-form-checkbox-input"
+                                    required>
+                                <span class="modals__buy-modal-form-checkbox-mark">
+                                    <svg width="12" height="12" aria-hidden="true" class="icon-checkmark">
+                                        <use xlink:href="#checkmark" />
+                                    </svg>
+                                </span>
+                                <span class="modals__buy-modal-form-checkbox-content">
+                                    Даю согласие на обработку персональных данных
+                                </span>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn news__all-link modals__buy-modal-form-submit">
+                            <span class="btn__inner-content">
+                                Отправить
+                            </span>
+                        </button>
+
+
+                    </form>
+                </div>
+                <div class="modals__buy-modal-form-success">
+                    <div class="modals__buy-modal-form-success-content">
+                        <div class="modals__buy-modal-form-success-large-text">
+                            Спасибо,<br>
+                            <span class="contour-text">
+                                Ваша заявка</span><br>
+                            <span class="contour-text">Отправлена</span>
+                        </div>
+                        <div class="modals__buy-modal-form-success-small-text">
+                            <p>
+                                Наш менеджер перезвонит вам<br>
+                                и уточнит все детали
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -2,7 +2,6 @@
     color: white;
     @include breakpoint(mobile) {
         background-color: var(--blue);
-       
     }
 }
 
@@ -67,13 +66,11 @@
     }
 }
 
-
-
 .page-footer__contact-us-form-row {
     display: flex;
     margin: -2.6rem -1.5rem;
     flex-wrap: wrap;
-  
+
     @include breakpoint(mobile) {
         flex-wrap: nowrap;
         flex-direction: column;
@@ -235,6 +232,10 @@ textarea.page-footer__contact-us-form-input {
     margin: auto 0;
     transition: color 0.2s;
     &:hover {
+        color: white;
+    }
+
+    &:focus-within {
         color: white;
     }
 
@@ -541,42 +542,6 @@ textarea.page-footer__contact-us-form-input {
     flex-shrink: 0;
 }
 
-.page-footer__contact-us-form-success {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--blue);
-    color: white;
-    background-image: url('../img/success-bg.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 7rem;
-    z-index: 50;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity .3s, visibility 0s linear .3s;
-
-
-    .contact-form-success & {
-        opacity: 1;
-        visibility: visible;
-        transition: opacity .3s, visibility .3s;
-    }
-
-
-    @include breakpoint(mobile) {
-        background-image: none;
-        padding: 3rem var(--content-padding);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      
-    }
-}
-
 .page-footer__contact-us-form-success-content {
     max-width: 45rem;
 
@@ -606,3 +571,4 @@ textarea.page-footer__contact-us-form-input {
         font-size: 1.6rem;
     }
 }
+

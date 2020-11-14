@@ -13,6 +13,8 @@ import JoinAccordions from './joinAccordions';
 import LotsCardImageSlider from './lotsCardImageSlider';
 import LotsAccordions from './lotsAccordions';
 import PaginationSlider from './paginationSlider';
+import LotsDetailGallery from './lotsDetailGallery';
+import Modals from './modals';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -30,6 +32,8 @@ document.addEventListener('DOMContentLoaded', function() {
     LotsCardImageSlider();
     LotsAccordions();
     PaginationSlider();
+    LotsDetailGallery();
+    Modals();
 });
 
 window.addEventListener('load', function() {

@@ -3,7 +3,7 @@
     z-index: 1;
     background-color: var(--blue);
     color: white;
-    padding-bottom: 9rem;
+    padding-bottom: 8rem;
     padding-top: 22rem;
 
     @include breakpoint(mobile) {
@@ -68,6 +68,9 @@
         width: 100%;
         flex-grow: 0;
         margin-bottom: 3rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 }
 .page-intro__right-col {
@@ -85,6 +88,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 1.2rem;
+    flex-wrap: wrap;
     @include breakpoint(mobile) {
         margin-bottom: 2rem;
     }
@@ -121,6 +125,10 @@
     text-transform: uppercase;
     margin-bottom: 3rem;
     font-weight: 400;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 
     @include breakpoint(mobile) {
         font-size: 4rem;

@@ -22,7 +22,8 @@ export default function ContractorsSlider() {
 
             speed: 2000,
             virtualTranslate: true,
-            allowTouchMove: false,
+            allowTouchMove: true,
+            followFinger: false,
             effect: 'disappear',
             pagination: {
                 el: element.querySelector('.slider-fraction-pagination'),
