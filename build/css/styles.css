@@ -5351,15 +5351,19 @@ textarea.page-footer__contact-us-form-input {
     -ms-flex-negative: 0;
         flex-shrink: 0;
     background: rgba(255, 255, 255, 0.5);
-    width: 0.8rem;
-    height: 0.8rem;
-    margin: 0.3rem;
+    width: 8px;
+    height: 8px;
+    margin: 0 3px;
     opacity: 1;
     -webkit-transition: background-color 0.2s;
     transition: background-color 0.2s; }
     .lots__card-image-slider-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
       background-color: #fff;
       opacity: 1; }
+    @media only screen and (max-width: 968px) {
+      .lots__card-image-slider-pagination .swiper-pagination-bullet {
+        width: 6px;
+        height: 6px; } }
 
 .lots__card-image-container {
   position: absolute;

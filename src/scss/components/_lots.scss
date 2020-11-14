@@ -178,14 +178,19 @@
     .swiper-pagination-bullet {
         flex-shrink: 0;
         background: rgba(255, 255, 255, 0.5);
-        width: 0.8rem;
-        height: 0.8rem;
-        margin: 0.3rem;
+        width: 8px;
+        height: 8px;
+        margin: 0 3px;
         opacity: 1;
         transition: background-color 0.2s;
         &.swiper-pagination-bullet-active {
             background-color: #fff;
             opacity: 1;
+        }
+
+        @include breakpoint(small-tablet) {
+            width: 6px;
+            height: 6px;
         }
     }
 }
