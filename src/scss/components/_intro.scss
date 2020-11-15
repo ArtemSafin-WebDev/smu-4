@@ -108,11 +108,19 @@
     -webkit-text-fill-color: white;
 }
 
+
+
+.intro__features-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .intro__features-list-item {
     margin-bottom: 5rem;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+ 
     &:last-child {
         margin-bottom: 0;
     }

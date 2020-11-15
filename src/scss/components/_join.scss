@@ -216,7 +216,7 @@
     flex-grow: 1;
     overflow: hidden;
     max-height: 4rem;
-    transition: max-height 0.6s ease;
+    transition: max-height 2s ease;
     @include breakpoint(mobile) {
         width: 100%;
         flex-grow: 0;
@@ -245,8 +245,14 @@
 
     em {
         font-style: normal;
-        color: white;
+        color: inherit;
         font-weight: 500;
+        transition: color .2s;
+
+
+        // .join__vacancies-card.active & {
+        //     color: white;
+        // }
     }
 
     @include breakpoint(mobile) {

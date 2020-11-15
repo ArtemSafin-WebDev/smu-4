@@ -141,6 +141,12 @@
 .page-header__open-menu {
     margin-right: 2rem;
 
+    .no-touch &:hover {
+        .page-header__open-menu-content > span {
+            background-color: rgba(white, .7);
+        }
+    }
+
     @include breakpoint(mobile) {
         margin: 0;
     }
@@ -157,6 +163,7 @@
         margin-bottom: 0.8rem;
         transform-origin: left center;
         display: block;
+        transition: background-color .2s;
         &:last-child {
             margin-bottom: 0;
         }
