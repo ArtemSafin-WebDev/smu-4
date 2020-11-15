@@ -15,6 +15,7 @@ import LotsAccordions from './lotsAccordions';
 import PaginationSlider from './paginationSlider';
 import LotsDetailGallery from './lotsDetailGallery';
 import Modals from './modals';
+import ProjectsSlider from './projectsSlider';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -34,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
     PaginationSlider();
     LotsDetailGallery();
     Modals();
+    ProjectsSlider();
 });
 
 window.addEventListener('load', function() {
