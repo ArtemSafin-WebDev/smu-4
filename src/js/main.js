@@ -19,6 +19,7 @@ import ProjectsSlider from './projectsSlider';
 import ContactsMaps from './contactMaps';
 import ContactUsTabs from './contactUsTabs';
 import FileUpload from './fileUpload';
+import AnchorLinks from './anchorLinks';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -42,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
     ContactsMaps();
     ContactUsTabs();
     FileUpload();
+    AnchorLinks();
 });
 
 window.addEventListener('load', function() {
