@@ -5,10 +5,14 @@
     color: white;
     padding-bottom: 8rem;
     padding-top: 22rem;
-
+    min-height: 51rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     @include breakpoint(mobile) {
         padding-top: 12rem;
         padding-bottom: 5rem;
+        min-height: auto;
     }
 }
 
