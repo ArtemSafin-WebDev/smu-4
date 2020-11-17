@@ -43,12 +43,14 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    padding-top: 1.6rem;
     @include breakpoint(mobile) {
         display: flex;
         flex-direction: column;
         align-items: initial;
         justify-content: initial;
         display: contents;
+        padding: 0;
     }
 }
 
@@ -60,26 +62,13 @@
 
 .contractors__presentation-text {
     max-width: 40rem;
-    font-size: 1.8rem;
-    line-height: 2.2rem;
-    font-family: var(--din);
-    &::before {
-        content: '';
-        display: block;
-        width: 3rem;
-        height: 0.3rem;
-        background-color: var(--primary-color);
-        margin-bottom: 2rem;
-        flex-shrink: 0;
-    }
-
+    @include textWithOrangeBar();
 
     @include breakpoint(mobile) {
         max-width: none;
         margin-bottom: 4.5rem;
     }
 }
-
 
 .contractors__apply-link {
     margin-left: 2rem;
@@ -143,7 +132,6 @@
 }
 
 .contractors__slider-card-link-image {
-   
     display: block;
 
     @include breakpoint(mobile) {
@@ -153,7 +141,6 @@
         max-width: 100%;
     }
 }
-
 
 .contractors__slider-controls {
     display: flex;

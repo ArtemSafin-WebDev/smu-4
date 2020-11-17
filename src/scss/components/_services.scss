@@ -28,14 +28,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 2.5rem;
+    padding-top: 3rem;
     position: relative;
     &::before {
         content: '';
         position: absolute;
         left: 0;
         top: 0.8rem;
-        width: 3rem;
+        width: 30px;
         height: 0.3rem;
         background-color: var(--primary-color);
         @include breakpoint(mobile) {

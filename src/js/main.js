@@ -16,6 +16,9 @@ import PaginationSlider from './paginationSlider';
 import LotsDetailGallery from './lotsDetailGallery';
 import Modals from './modals';
 import ProjectsSlider from './projectsSlider';
+import ContactsMaps from './contactMaps';
+import ContactUsTabs from './contactUsTabs';
+import FileUpload from './fileUpload';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -36,6 +39,9 @@ document.addEventListener('DOMContentLoaded', function() {
     LotsDetailGallery();
     Modals();
     ProjectsSlider();
+    ContactsMaps();
+    ContactUsTabs();
+    FileUpload();
 });
 
 window.addEventListener('load', function() {

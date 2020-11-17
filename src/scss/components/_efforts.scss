@@ -48,26 +48,13 @@
 }
 
 .efforts__text {
-    font-size: 1.8rem;
-    line-height: 2.2rem;
-    font-family: var(--din);
+    @include textWithOrangeBar();
     margin-bottom: 3rem;
     max-width: 38rem;
-    &::before {
-        content: '';
-        width: 3rem;
-        height: 0.3rem;
-        background-color: var(--primary-color);
-        margin-bottom: 2.5rem;
-        display: block;
-        @include breakpoint(mobile) {
-            margin-bottom: 1.5rem;
-        }
-    }
+   
 
     @include breakpoint(mobile) {
-        font-size: 1.8rem;
-        line-height: 2.2rem;
+     
         max-width: none;
         margin-bottom: 1rem;
     }

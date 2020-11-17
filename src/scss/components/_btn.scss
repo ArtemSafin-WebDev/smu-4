@@ -14,6 +14,16 @@
     background-color: var(--primary-color);
     transition: background-color 0.3s, color 0.3s;
     outline: none;
+
+    &--large {
+        font-size: 1.8rem;
+        line-height: 1.2;
+
+        @include breakpoint(mobile) {
+            font-size: 1.3rem;
+            line-height: 1.9rem;
+        }
+    }
     &:link,
     &:visited {
         color: white;
@@ -79,6 +89,13 @@
     justify-content: center;
     position: relative;
     flex-grow: 1;
+
+    .btn--large & {
+        padding: 2.3rem 4rem;
+        @include breakpoint(mobile) {
+            padding: 1.6rem 3.8rem;
+        }
+    }
     @include breakpoint(mobile) {
         padding: 2rem 4rem;
     }

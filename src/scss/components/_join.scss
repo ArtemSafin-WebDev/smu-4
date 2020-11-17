@@ -71,23 +71,11 @@
 }
 
 .join__text {
-    font-size: 1.8rem;
-    line-height: 2.2rem;
+    @include textWithOrangeBar();
     margin-bottom: 8.5rem;
     max-width: 38rem;
-    font-family: var(--din);
-    &::before {
-        content: '';
-        display: block;
-        background-color: var(--primary-color);
-        width: 3rem;
-        height: 0.3rem;
-        margin-bottom: 2.5rem;
-        flex-shrink: 0;
-        @include breakpoint(mobile) {
-            margin-bottom: 1.5rem;
-        }
-    }
+   
+    
 
     @include breakpoint(mobile) {
         max-width: none;
@@ -250,9 +238,9 @@
         transition: color .2s;
 
 
-        // .join__vacancies-card.active & {
-        //     color: white;
-        // }
+        .join__vacancies-card.active & {
+            color: white;
+        }
     }
 
     @include breakpoint(mobile) {
