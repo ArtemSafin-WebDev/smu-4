@@ -22,7 +22,7 @@ export default function Menu() {
 
 
         if (window.matchMedia(`(max-width: ${MOBILE_WIDTH}px)`).matches) {
-            const accordionsFactory = accordions(Array.from(document.querySelectorAll('.js-menu-accordion')));
+            const accordionsFactory = accordions(Array.from(document.querySelectorAll('.js-menu-accordion')), -1, 0.4);
 
             accordionsFactory.init();
         }

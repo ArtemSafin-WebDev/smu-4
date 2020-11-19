@@ -1,41 +1,30 @@
 // import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-let animating = false;
+import gsap from 'gsap';
 
-function openAccordeon(element) {
-    element.style.maxHeight = 'none';
-    const computedStyle = getComputedStyle(element);
-    const computedHeight = computedStyle.height;
-    element.style.maxHeight = '';
-    animating = true;
-    element && element.scrollTop;
 
-    const transitionEndHandler = () => {
-    
-        element.style.maxHeight = 'none';
-        element.removeEventListener('transitionend', transitionEndHandler);
-        animating = false;
-        // ScrollTrigger.refresh(true);
-    };
-    element.addEventListener('transitionend', transitionEndHandler);
-    element.style.maxHeight = `${computedHeight}`;
-}
 
-function closeAccordeon(element) {
-    const computedStyle = getComputedStyle(element);
-    const computedHeight = computedStyle.height;
-    element.style.maxHeight = `${computedHeight}`;
 
-    element && element.scrollTop;
 
-    element.style.maxHeight = '';
-
-    // ScrollTrigger.refresh(true);
-}
-
-export default function(accordionElements, indexToOpenFirst) {
+export default function(accordionElements, indexToOpenFirst, speed = 0.7) {
     const accordionInstances = [];
     let initialized = false;
+    
+
+    function openAccordeon(element) {
+        gsap.to(element, {
+            height: 'auto',
+            duration: speed
+        })
+    }
+    
+    function closeAccordeon(element) {
+    
+        gsap.to(element, {
+            height: 0,
+            duration: speed
+        })
+    }
 
     function init() {
         accordionElements.forEach(element => {
@@ -44,7 +33,7 @@ export default function(accordionElements, indexToOpenFirst) {
 
             const handler = function(event) {
                 event.preventDefault();
-                if (animating) return;
+               
                 if (event.relatedTarget) {
                     event.relatedTarget.focus();
                 } else {

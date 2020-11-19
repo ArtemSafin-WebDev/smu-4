@@ -3195,10 +3195,8 @@ textarea.page-footer__contact-us-form-input {
 
 @media only screen and (max-width: 767px) {
   .menu__navigation-accordion-wrapper {
-    max-height: 0;
-    overflow: hidden;
-    -webkit-transition: max-height .4s;
-    transition: max-height .4s; } }
+    height: 0;
+    overflow: hidden; } }
 
 @media only screen and (max-width: 767px) {
   .menu__navigation-secondary-list {
@@ -5210,18 +5208,18 @@ textarea.page-footer__contact-us-form-input {
   width: 40%;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
-          flex-grow: 1;
-  overflow: hidden;
-  max-height: 4rem;
-  -webkit-transition: max-height 2s ease;
-  transition: max-height 2s ease; }
+          flex-grow: 1; }
   @media only screen and (max-width: 767px) {
     .join__vacancies-card-description {
       width: 100%;
       -webkit-box-flex: 0;
           -ms-flex-positive: 0;
-              flex-grow: 0;
-      max-height: 4rem; } }
+              flex-grow: 0; } }
+
+.join__vacancies-card-description-accordion-content {
+  height: 0;
+  min-height: 4.2rem;
+  overflow: hidden; }
 
 .join__vacancies-card-description-content {
   font-size: 1.8rem;
@@ -5817,10 +5815,8 @@ textarea.page-footer__contact-us-form-input {
       margin-top: 0.6rem; } }
 
 .lots__navigation-accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  -webkit-transition: max-height 0.4s;
-  transition: max-height 0.4s; }
+  height: 0;
+  overflow: hidden; }
 
 .lots__navigation-accordion-content-inner {
   padding: 2.8rem 2.2rem;

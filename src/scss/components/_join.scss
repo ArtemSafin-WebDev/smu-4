@@ -202,18 +202,27 @@
 .join__vacancies-card-description {
     width: 40%;
     flex-grow: 1;
-    overflow: hidden;
-    max-height: 4rem;
-    transition: max-height 2s ease;
+   
+   
     @include breakpoint(mobile) {
         width: 100%;
         flex-grow: 0;
-        max-height: 4rem;
+      
     }
 }
 
-.join__vacancies-card-description-inner {
+.join__vacancies-card-description-accordion-content {
+    height: 0;
+    min-height: 4.2rem;
+    
+    
+    overflow: hidden;
+    @include breakpoint(mobile) {
+        
+    }
 }
+
+
 
 .join__vacancies-card-description-content {
     font-size: 1.8rem;
@@ -254,6 +263,7 @@
     line-height: 1.2;
     align-self: flex-start;
     margin-top: 7.5rem;
+    
     .btn__inner-content {
         padding: 2.6rem 7.6rem;
         @include breakpoint(mobile) {

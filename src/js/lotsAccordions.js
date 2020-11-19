@@ -7,5 +7,5 @@ export default function LotsAccordions() {
 
   
 
-    accordions(elements, elementInitiallyOpen).init();
+    accordions(elements, elementInitiallyOpen, 0.4).init();
 }
