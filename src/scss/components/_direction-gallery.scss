@@ -1,0 +1,116 @@
+.direction-gallery {
+    margin: 10rem 0;
+    margin-bottom: 13rem;
+
+    @include breakpoint(mobile) {
+        margin: 4rem 0;
+    }
+}
+
+.direction-gallery__heading {
+    margin-bottom: 5rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
+}
+
+.direction-gallery__slider {
+    position: relative;
+
+    .swiper-container {
+        @include breakpoint(mobile) {
+            overflow: visible;
+        }
+    }
+}
+
+.direction-gallery__slider-card {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: var(--blue);
+    position: relative;
+    z-index: 1;
+    padding: 4rem;
+    justify-content: flex-end;
+    min-height: 70rem;
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    @include breakpoint(mobile) {
+        padding: 1.8rem;
+        min-height: 24rem;
+    }
+}
+
+.direction-gallery__slider-card-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 68.55%, #000000 174.06%);
+
+        @include breakpoint(mobile) {
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 35%, #000000 140%);
+        }
+    }
+}
+
+.direction-gallery__slider-card-bg-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    @include objectFitCover();
+}
+
+.direction-gallery__slider-card-title {
+    font-weight: bold;
+    font-size: 3.2rem;
+    line-height: 3.8rem;
+    padding-right: 22rem;
+    font-family: var(--din);
+
+    @include breakpoint(mobile) {
+        font-size: 2rem;
+        line-height: 1.2;
+        padding: 0;
+       
+    }
+}
+
+.direction-gallery__slider-controls {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    bottom: 4rem;
+    right: 4rem;
+    z-index: 70;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+
+.direction-gallery__slider-pagination {
+    margin-right: 2rem;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}

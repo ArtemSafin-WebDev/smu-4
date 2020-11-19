@@ -20,6 +20,8 @@ import ContactsMaps from './contactMaps';
 import ContactUsTabs from './contactUsTabs';
 import FileUpload from './fileUpload';
 import AnchorLinks from './anchorLinks';
+import DirectionGallery from './directionGallery';
+import ReviewsSlider from './reviewsSlider';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -44,6 +46,8 @@ document.addEventListener('DOMContentLoaded', function() {
     ContactUsTabs();
     FileUpload();
     AnchorLinks();
+    DirectionGallery();
+    ReviewsSlider();
 });
 
 window.addEventListener('load', function() {

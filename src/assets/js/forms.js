@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     var contactForms = [document.querySelector('#contact-form'), document.querySelector('#review-form'), document.querySelector('#report-form')];
     contactForms.forEach(contactForm => {
+        if (!contactForm) return;
         contactForm.addEventListener('submit', function(event) {
             if (
                 $(contactForm)

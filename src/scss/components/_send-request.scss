@@ -1,0 +1,76 @@
+.send-request {
+    background-color: var(--blue);
+    color: white;
+}
+
+.send-request__panel {
+    background-color: var(--primary-color);
+    padding: 4.2rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include breakpoint(mobile) {
+        padding: 1.8rem;
+        flex-direction: column;
+        justify-content: initial;
+        align-items: initial;
+    }
+}
+
+.send-request__heading {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    @include breakpoint(mobile) {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.send-request__link {
+    flex-shrink: 0;
+    background-color: #fff;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    line-height: 1.2;
+
+    min-width: 33rem;
+    text-align: center;
+    text-transform: uppercase;
+    &::before,
+    &::after {
+        background-color: #fff;
+    }
+
+    .btn__inner-content {
+        padding: 2.2rem 4rem;
+        &::before,
+        &::after {
+            background-color: #fff;
+        }
+
+        @include breakpoint(mobile) {
+            padding: 1.6rem 3.8rem;
+        }
+    }
+
+    &:link,
+    &:visited {
+        color: var(--primary-color);
+    }
+
+    &:hover {
+        background-color: transparent;
+        color: white;
+    }
+
+
+    @include breakpoint(mobile) {
+        min-width: auto;
+        font-size: 1.3rem;
+        line-height: 1.9rem;
+      
+    }
+}

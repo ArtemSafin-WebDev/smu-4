@@ -1,0 +1,138 @@
+.direction-article {
+    background-color: var(--blue);
+    color: white;
+}
+
+.direction-article__row {
+    padding: 17rem 0;
+    display: flex;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        padding: 4rem 0;
+        padding-top: 7rem;
+    }
+}
+
+.direction-article__left-col {
+    width: 50%;
+    flex-grow: 1;
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-grow: 0;
+        margin-bottom: 3rem;
+    }
+}
+
+.direction-article__right-col {
+    width: 69rem;
+    flex-shrink: 0;
+    margin-left: 6.5rem;
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-grow: 0;
+        margin: 0;
+        flex-shrink: 1;
+    }
+}
+
+.direction-article__content {
+    font-size: 2.2rem;
+    line-height: 2.7rem;
+    font-family: var(--din);
+    position: relative;
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+    }
+    &::before {
+        content: '';
+        width: 3rem;
+        height: 3px;
+        background-color: var(--primary-color);
+        position: absolute;
+        left: 0;
+        top: -3.5rem;
+        @include breakpoint(mobile) {
+            
+            top: -2.5rem;
+        }
+    }
+
+    p {
+        margin-bottom: 3.2rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include breakpoint(mobile) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    a {
+        border-bottom: 1px solid var(--primary-color);
+        transition: color .2s, border-color .2s;
+        &:link,
+        &:visited {
+            color: var(--primary-color);
+        }
+
+        &:hover {
+            border-color: transparent;
+        }
+    }
+
+    ul {
+        margin-bottom: 5rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include breakpoint(mobile) {
+            margin-bottom: 2rem;
+        }
+
+        li {
+            position: relative;
+            padding-left: 4.2rem;
+            margin-bottom: 3.2rem;
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            @include breakpoint(mobile) {
+                margin-bottom: 2rem;
+                padding-left: 3rem;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: .4rem;
+                width: 1.8rem;
+                height: 1.8rem;
+                border-radius: 50%;
+                background-image: url('../img/list-marker.svg');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                @include breakpoint(mobile) {
+            
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    top: .2rem;
+                }
+            }
+        }
+    }
+}
+
+
+
+.direction-article__image {
+    display: block;
+    width: 100%;
+    height: auto;
+}

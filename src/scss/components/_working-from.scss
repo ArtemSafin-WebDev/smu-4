@@ -1,0 +1,133 @@
+.working-from {
+    margin: 10rem 0;
+    @include breakpoint(mobile) {
+        margin: 4rem 0;
+    }
+}
+
+.working-from__row {
+    display: flex;
+    justify-content: space-between;
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        justify-content: initial;
+    }
+}
+
+.working-from__left-col {
+    flex-shrink: 0;
+    margin-right: 4rem;
+    @include breakpoint(mobile) {
+        margin: 0;
+        flex-shrink: 1;
+        margin-bottom: 3.5rem;
+    }
+}
+
+.working-from__right-col {
+    width: 70rem;
+    margin-left: auto;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+.working-from__intro-text {
+    font-size: 4.5rem;
+    line-height: 5.6rem;
+
+    font-family: var(--din);
+    color: var(--blue);
+
+    @include breakpoint(mobile) {
+        font-size: 2.8rem;
+        line-height: 1.3;
+    }
+}
+
+.working-from__year {
+    font-weight: bold;
+    font-size: 7.9rem;
+    line-height: 6.8rem;
+    white-space: nowrap;
+    color: var(--blue);
+    user-select: none;
+    text-transform: uppercase;
+
+    @include breakpoint(mobile) {
+        font-size: 6rem;
+        line-height: 1.2;
+    }
+}
+
+.working-from__year-numbers {
+    font-size: 30rem;
+    line-height: 1;
+    margin-left: -2rem;
+    font-weight: 400;
+
+    @include breakpoint(mobile) {
+        font-size: 13rem;
+        margin-left: -0.5rem;
+    }
+}
+
+.working-from__year-numbers-contour {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    -webkit-text-stroke-color: var(--blue);
+}
+
+.working-from__features-list-item {
+    margin-bottom: 6rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3.5rem;
+    }
+}
+
+.working-from__features-card {
+    display: flex;
+    align-items: center;
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: initial;
+    }
+}
+
+.working-from__features-card-image {
+    width: 11rem;
+    height: 11rem;
+    flex-shrink: 0;
+    margin-right: 5rem;
+    @include objectFitContain();
+
+    @include breakpoint(mobile) {
+        width: 8rem;
+        height: 8rem;
+        margin: 0;
+        margin-bottom: 1.4rem;
+    }
+}
+
+.working-from__features-card-content {
+    font-size: 2.4rem;
+    line-height: 3rem;
+    font-family: var(--din);
+
+    em {
+        font-style: normal;
+        color: var(--primary-color);
+        font-weight: 500;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+    }
+}
