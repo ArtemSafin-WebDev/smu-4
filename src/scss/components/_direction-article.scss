@@ -28,6 +28,11 @@
     width: 69rem;
     flex-shrink: 0;
     margin-left: 6.5rem;
+
+    @include breakpoint(small-tablet) {
+        width: 50rem;
+        
+    }
     @include breakpoint(mobile) {
         width: 100%;
         flex-grow: 0;
