@@ -113,7 +113,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 -3rem;
+    margin: 0 -4rem;
     @include breakpoint(mobile) {
         flex-direction: column;
         align-items: initial;
@@ -124,7 +124,7 @@
 }
 
 .contractors__slider-card-link {
-    margin: 0 3rem;
+    margin: 0 4rem;
     @include breakpoint(mobile) {
         display: block;
         margin: 0;
@@ -133,7 +133,11 @@
 
 .contractors__slider-card-link-image {
     display: block;
-
+    width: auto;
+    height: auto;
+    max-height: 8rem;
+    max-width: 20rem;
+    object-fit: contain;
     @include breakpoint(mobile) {
         max-height: 4.3rem;
         height: auto;

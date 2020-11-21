@@ -3,10 +3,24 @@
     color: white;
     padding: 15rem 0;
 
+
+ 
+
     @include breakpoint(mobile) {
         padding: 4rem 0;
         padding-top: 3rem;
         padding-bottom: var(--content-padding);
+    }
+
+    &--white {
+        background-color: transparent;
+        color: black;
+        padding: 0;
+        margin: 12rem 0;
+        @include breakpoint(mobile) {
+            padding: 0;
+            margin: 4rem 0;
+        }
     }
 }
 
