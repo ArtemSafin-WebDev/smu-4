@@ -1,0 +1,117 @@
+.management-system-description {
+    padding-top: 12rem;
+    background: #f6f6f6;
+    margin-bottom: calc(-1 * var(--footer-shift-distance));
+    padding-bottom: var(--footer-shift-distance);
+    margin-top: 12rem;
+
+    @include breakpoint(mobile) {
+        margin-top: 4rem;
+        padding-top: 5rem;
+    }
+}
+
+.management-system-description__info-cards-list {
+    margin-bottom: 10rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 5rem;
+    }
+}
+
+.management-system-description__info-cards-list-item {
+    margin-bottom: 12rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include breakpoint(mobile) {
+        margin-bottom: 6rem;
+        
+    }
+}
+
+.management-system-description__info-card {
+    display: flex;
+    align-items: flex-start;
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: initial;
+        
+    }
+}
+
+.management-system-description__info-card-left-col,
+.management-system-description__info-card-right-col {
+    width: 50%;
+    @include breakpoint(mobile) {
+        width: 100%;
+    }
+}
+
+.management-system-description__info-card-left-col {
+    padding-right: 7.8rem;
+    @include breakpoint(mobile) {
+        padding: 0;
+        margin-bottom: 2.4rem;
+    }
+}
+
+
+.management-system-description__info-card--inverted {
+    flex-direction: row-reverse;
+    .management-system-description__info-card-left-col {
+        padding: 0;
+        padding-left: 7.8rem;
+        @include breakpoint(mobile) {
+            padding: 0;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+    }
+}
+
+.management-system-description__info-card-heading {
+    font-size: 4rem;
+    line-height: 6rem;
+    margin-bottom: 6rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: -1.4rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.6rem;
+        line-height: 1.3;
+        margin-bottom: 3rem;
+    }
+}
+
+.management-system-description__info-card-text {
+    @include textWithOrangeBar();
+    max-width: 58rem;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+
+    p {
+        margin-bottom: 3rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include breakpoint(mobile) {
+            margin-bottom: 1.8rem;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+    line-height: 1.3;
+    }
+}
+
+.management-system-description__image {
+    display: block;
+    width: 100%;
+}
