@@ -94,3 +94,64 @@
         </div>
     </div>
 </div>
+
+{{#if teamModals}}
+<div class="team-modals">
+    <div class="modals__modal js-modal" id="team-modal">
+        <div class="modals__modal-inner modals__modal-inner--team">
+            <button class="modals__modal-close js-modal-close">
+                <svg width="22" height="22" aria-hidden="true" class="icon-cross">
+                    <use xlink:href="#cross" />
+                </svg>
+            </button>
+            <div class="modals__team-modal">
+                <div class="modals__team-modal-left-col">
+                    <img src="img/team-modal-image.jpg" alt="" class="modals__team-modal-image">
+                </div>
+                <div class="modals__team-modal-right-col">
+                    <h3 class="modals__team-modal-heading">
+                        Саруханов Александр Вячеславович
+                    </h3>
+                    <div class="modals__team-modal-role">
+                        Генеральный директор
+                    </div>
+                    <div class="modals__team-modal-content">
+                        <h4>
+                            ТРУДОВАЯ ДЕЯТЕЛЬНОСТЬ
+                        </h4>
+                        <p>
+                            Общий стаж работы — 23 года, из них в отрасли — 15 лет.
+                        </p>
+                        <p>
+                            Ранее Александр Вячеславович возглавлял финансовые службы крупных производственных и
+                            горнодобывающих предприятий.
+                        </p>
+                        <p>
+                            С момента создания ООО «СМУ 4» (1991 год) входит ее в Совет директоров, а с 2010 года
+                            является генеральным директором.
+                        </p>
+                        <p>
+                            С 2012 года Андрей Попов входит в Совет директоров ООО «СМУ 4», а в 2017 году становится ее
+                            генеральным директором.
+                        </p>
+                        <h4>
+                            ЛИЧНАЯ ИНФОРМАЦИЯ
+                        </h4>
+                        <p>Женат, воспитывает троих детей.<br>
+                            Увлекается активными видами спорта, рыбалкой.</p>
+                    </div>
+                    <a href="mailto:dsg_smu4@smu4.ufanet.ru" class="modals__team-modal-email">
+                        <svg width="22" height="22" aria-hidden="true" class="icon-email">
+                            <use xlink:href="#email" />
+                        </svg>
+                        <span class="modals__team-modal-email-text">
+                            dsg_smu4@smu4.ufanet.ru
+                        </span>
+
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/if}}

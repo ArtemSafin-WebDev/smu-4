@@ -1,0 +1,103 @@
+.management {
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+
+    @include breakpoint(mobile) {
+        margin: 4rem 0;
+    }
+}
+
+.management__cards-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -4.2rem -0.2rem;
+    @include breakpoint(mobile) {
+        margin: -2rem;
+    }
+}
+
+.management__cards-list-item {
+    padding: 4.2rem 0.2rem;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    @include breakpoint(mobile) {
+        width: 100%;
+        padding: 2rem;
+    }
+}
+
+.management__card {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+   
+    &:link,
+    &:visited {
+        color: black;
+    }
+
+    &:hover {
+        .management__card-image {
+            transform: scale(1.04);
+            transition: transform .4s ease-out;
+        }
+    }
+}
+
+.management__card-image-container {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    backface-visibility: hidden;
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        padding-bottom: 120%;
+
+        @include breakpoint(mobile) {
+            padding-bottom: 70%;
+        }
+    }
+}
+
+.management__card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    
+    transition: transform .4s;
+    @include objectFitCover();
+
+    @include breakpoint(mobile) {
+        @include objectFitCoverTop();
+    }
+}
+
+.management__card-content {
+    padding-right: 4rem;
+}
+
+.management__card-title {
+    font-size: 2.6rem;
+    line-height: 3.6rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    color: #1b377f;
+    font-weight: 400;
+
+    @include breakpoint(mobile) {
+        font-size: 2.2rem;
+        line-height: 1.3;
+    }
+    
+}
+
+.management__card-role {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    font-family: var(--din);
+}
