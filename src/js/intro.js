@@ -57,6 +57,6 @@ export default function Intro() {
             }
         })
 
-        setActiveLayer(0);
+        // setActiveLayer(0);
     });
 }
