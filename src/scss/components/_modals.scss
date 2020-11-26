@@ -38,6 +38,10 @@
     &--team {
         max-width: 110rem;
     }
+
+    &--license {
+        max-width: 50rem;
+    }
     @include breakpoint(mobile) {
         margin: 0;
         max-width: none;
@@ -590,4 +594,12 @@
 .modals__team-modal-email-text {
     border-bottom: 1px solid rgba(255, 96, 0, 0.3);
     transition: border-color .2s;
+}
+
+
+
+.modals__license-modal-image {
+    display: block;
+    width: 100%;
+    height: auto;
 }

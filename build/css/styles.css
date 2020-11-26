@@ -6305,6 +6305,8 @@ textarea.page-footer__contact-us-form-input {
   position: relative; }
   .modals__modal-inner--team {
     max-width: 110rem; }
+  .modals__modal-inner--license {
+    max-width: 50rem; }
   @media only screen and (max-width: 767px) {
     .modals__modal-inner {
       margin: 0;
@@ -6887,6 +6889,11 @@ textarea.page-footer__contact-us-form-input {
   border-bottom: 1px solid rgba(255, 96, 0, 0.3);
   -webkit-transition: border-color .2s;
   transition: border-color .2s; }
+
+.modals__license-modal-image {
+  display: block;
+  width: 100%;
+  height: auto; }
 
 .page-navigation {
   border-bottom: 1px solid #E3E3E3;
@@ -9325,3 +9332,92 @@ textarea.page-footer__contact-us-form-input {
 .management-system-description__image {
   display: block;
   width: 100%; }
+
+.licenses {
+  margin-top: 10rem;
+  margin-bottom: 5rem; }
+  @media only screen and (max-width: 767px) {
+    .licenses {
+      margin: 3rem 0; } }
+
+.licenses__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: -3rem -1.4rem; }
+  @media only screen and (max-width: 767px) {
+    .licenses__list {
+      margin: -2rem -1rem; } }
+
+.licenses__list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 3rem 1.4rem;
+  width: 20%; }
+  @media only screen and (max-width: 968px) {
+    .licenses__list-item {
+      width: 25%; } }
+  @media only screen and (max-width: 767px) {
+    .licenses__list-item {
+      width: 50%;
+      padding: 2rem 1rem; } }
+
+.licenses__card-image-container {
+  position: relative;
+  margin-bottom: 2.2rem;
+  background-color: #fff; }
+  .licenses__card-image-container::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ebebeb; }
+  .licenses__card-image-container::before {
+    content: '';
+    display: block;
+    width: 100%;
+    padding-bottom: 140%; }
+  @media only screen and (max-width: 767px) {
+    .licenses__card-image-container {
+      margin-bottom: 1.5rem; } }
+
+.licenses__card-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+  font-family: 'object-fit: contain; object-position: center;'; }
+
+.licenses__card-title {
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  font-weight: 400;
+  font-family: var(--din);
+  margin-bottom: 1rem; }
+  @media only screen and (max-width: 767px) {
+    .licenses__card-title {
+      font-size: 1.6rem;
+      line-height: 1.3; } }
+
+.licenses__card-standard {
+  font-size: 2rem;
+  line-height: 1.2;
+  color: #1B377F;
+  text-transform: uppercase; }
+  @media only screen and (max-width: 767px) {
+    .licenses__card-standard {
+      font-size: 1.8rem; } }
