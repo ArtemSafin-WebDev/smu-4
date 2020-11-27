@@ -419,6 +419,12 @@
         transition: all 0.3s;
     }
 
+    .lots__navigation-accordion:first-child & {
+        &::after {
+            display: none;
+        }
+    }
+
     .lots__navigation-accordion.active & {
         background-color: #edeff5;
         &::after {

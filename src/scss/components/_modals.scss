@@ -39,12 +39,20 @@
         max-width: 110rem;
     }
 
+   
+
     &--license {
         max-width: 50rem;
         justify-content: center;
+        background-color: transparent;
         @include breakpoint(mobile) {
             max-width: none;
         }
+    }
+
+    &--youtube {
+        justify-content: center;
+        background-color: transparent;
     }
     @include breakpoint(mobile) {
         margin: 0;

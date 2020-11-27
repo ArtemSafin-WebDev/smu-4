@@ -1,0 +1,320 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<section class="page-intro">
+    <div class="page-intro__bg">
+        <img data-src="img/clients-reviews-bg.jpg" alt="" class="page-intro__bg-image lazyload">
+    </div>
+    <div class="container">
+        <div class="inner-container">
+            <div class="page-intro__content">
+                <div class="page-intro__row">
+                    <div class="page-intro__left-col">
+                        <div class="page-intro__breadcrumbs">
+                            <a href="#" class="page-intro__breadcrumbs-link">
+                                Главная
+                            </a>
+                            <span class="page-intro__breadcrumbs-divider">
+
+                            </span>
+                            <a href="#" class="page-intro__breadcrumbs-link">
+                                О компании
+                            </a>
+                            <span class="page-intro__breadcrumbs-divider">
+
+                            </span>
+                            <a href="#" class="page-intro__breadcrumbs-link active">
+                                Отзывы заказчиков
+                            </a>
+                        </div>
+                        <h1 class="page-intro__heading">
+                            Отзывы заказчиков
+                        </h1>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="clients-reviews">
+    <div class="container">
+        <div class="clients-reviews__row">
+            <div class="clients-reviews__left-col">
+                <div class="clients-reviews__intro-text">
+                    Клиенты подтверждают
+                    нашу ответственность, дисциплинированность
+                    и качество предоставляемых услуг
+                </div>
+                <ul class="clients-reviews__numbers">
+                    <li class="clients-reviews__numbers-item">
+                        <div class="clients-reviews__numbers-key">
+                            11 Регионов
+                        </div>
+                        <div class="clients-reviews__numbers-value">
+                            в которых мы ведем работы
+                        </div>
+                    </li>
+                    <li class="clients-reviews__numbers-item">
+                        <div class="clients-reviews__numbers-key">
+                            7500 Км
+                        </div>
+                        <div class="clients-reviews__numbers-value">
+                            построенных трубопроводов
+                        </div>
+                    </li>
+                    <li class="clients-reviews__numbers-item">
+                        <div class="clients-reviews__numbers-key">
+                            24 объекта
+                        </div>
+                        <div class="clients-reviews__numbers-value">
+                            реализовано с 1990 г
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="clients-reviews__right-col">
+                <ul class="clients-reviews__list js-clients-reviews-list">
+                    <li class="clients-reviews__list-item">
+                        <div class="clients-reviews__card">
+                            <div class="clients-reviews__card-quote">
+                                Весь комплекс работ был выполнен
+                                с надлежащим качеством и в полном объеме. Сотрудники зарекомендовали себя как грамотные
+                                спецы, знающие своё дело...
+                            </div>
+                            <a href="#youtube-modal"
+                                class="clients-reviews__card-watch-video js-modal-open js-youtube-modal"
+                                data-youtube-url="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                                <svg width="12" height="12" aria-hidden="true" class="icon-play">
+                                    <use xlink:href="#play" />
+                                </svg>
+                                Смотреть видео-отзыв
+                            </a>
+                            <div class="clients-reviews__card-author">
+                                <div class="clients-reviews__card-author-image-container">
+                                    <img src="img/clients-review.png" alt="" class="clients-reviews__card-author-image">
+                                </div>
+                                <div class="clients-reviews__card-author-content">
+                                    <div class="clients-reviews__card-author-name">
+                                        Г. М. Родионов
+                                    </div>
+                                    <div class="clients-reviews__card-author-role">
+                                        Начальник сосновского ЛПУ МГ<br>
+                                        ОАО «Газпром»
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="clients-reviews__list-item">
+                        <div class="clients-reviews__card">
+                            <div class="clients-reviews__card-quote">
+                                Весь комплекс работ был выполнен
+                                с надлежащим качеством и в полном объеме. Сотрудники зарекомендовали себя как грамотные
+                                спецы, знающие своё дело...
+                            </div>
+                            <a href="#client-reviews-modal" class="clients-reviews__card-link js-modal-open">
+                                <svg width="12" height="12" aria-hidden="true" class="icon-doc">
+                                    <use xlink:href="#doc" />
+                                </svg>
+                                <span class="clients-reviews__card-link-text">
+                                    показать оригинал
+                                </span>
+                            </a>
+
+                            <div class="clients-reviews__card-author">
+
+                                <div class="clients-reviews__card-author-content">
+                                    <div class="clients-reviews__card-author-name">
+                                        Г. М. Родионов
+                                    </div>
+                                    <div class="clients-reviews__card-author-role">
+                                        Начальник сосновского ЛПУ МГ<br>
+                                        ОАО «Газпром»
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modals__modal js-modal" id="client-reviews-modal">
+                                <div class="modals__modal-inner modals__modal-inner--license">
+                                    <button class="modals__modal-close js-modal-close">
+                                        <svg width="22" height="22" aria-hidden="true" class="icon-cross">
+                                            <use xlink:href="#cross" />
+                                        </svg>
+                                    </button>
+                                    <div class="modals__license-modal">
+                                        <img data-src="img/license-large.jpg" alt=""
+                                            class="modals__license-modal-image lazyload">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="clients-reviews__list-item">
+                        <div class="clients-reviews__card">
+                            <div class="clients-reviews__card-quote">
+                                Весь комплекс работ был выполнен
+                                с надлежащим качеством и в полном объеме. Сотрудники зарекомендовали себя как грамотные
+                                спецы, знающие своё дело...
+                            </div>
+                            <a href="#" class="clients-reviews__card-link">
+                                <svg width="12" height="12" aria-hidden="true" class="icon-link">
+                                    <use xlink:href="#link" />
+                                </svg>
+                                <span class="clients-reviews__card-link-text">
+                                    показать оригинал
+                                </span>
+                            </a>
+
+                            <div class="clients-reviews__card-author">
+                                <div class="clients-reviews__card-author-image-container">
+                                    <img src="img/clients-review.png" alt="" class="clients-reviews__card-author-image">
+                                </div>
+                                <div class="clients-reviews__card-author-content">
+                                    <div class="clients-reviews__card-author-name">
+                                        Г. М. Родионов
+                                    </div>
+                                    <div class="clients-reviews__card-author-role">
+                                        Начальник сосновского ЛПУ МГ<br>
+                                        ОАО «Газпром»
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </li>
+                </ul>
+                <div class="scroller-status">
+                    <div class="infinite-scroll-request">
+                        <div class="press-archive__loader">
+                            <svg width="30" height="30" aria-hidden="true" class="icon-loader">
+                                <use xlink:href="#loader" />
+                            </svg>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="pagination press-archive__pagination js-pagination-slider">
+
+                    <div class="press-archive__pagination-prev-next">
+                        <a href="#" class="press-archive__pagination-prev-link">
+                            Предыдущая страница
+                        </a>
+                        <a href="clients-reviews-2.html" class="press-archive__pagination-next-link">
+                            Следующая страница
+                        </a>
+                    </div>
+                    <div class="pagination__slider">
+                        <div class="pagination__slider-wrapper">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="#" class="pagination__slider-link active">
+                                            1
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="pagination__slider-link">
+                                            2
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="pagination__slider-link">
+                                            3
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="pagination__slider-link">
+                                            4
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="pagination__slider-link">
+                                            5
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="pagination__slider-link">
+                                            6
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="pagination__slider-link">
+                                            7
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="pagination__slider-link">
+                                            8
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-arrows slider-arrows--dark">
+                            <button class="slider-arrows__btn slider-arrows__btn--prev">
+                                <svg width="12" height="12" aria-hidden="true" class="icon-slider-arrow-left">
+                                    <use xlink:href="#slider-arrow-left" />
+                                </svg>
+                                <span class="slider-arrows__btn-progress">
+                                    <svg width="200" height="200" viewBox="0 0 200 200"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cy="100" cx="100" r="80" fill="transparent" stroke="white"
+                                            stroke-opacity="1" stroke-width="12" stroke-linecap="round">
+                                        </circle>
+                                        <circle cy="100" cx="100" r="80" fill="transparent" stroke="white"
+                                            stroke-width="12" stroke-dasharray="500" stroke-linecap="round">
+                                        </circle>
+                                    </svg>
+                                </span>
+
+                            </button>
+                            <button class="slider-arrows__btn slider-arrows__btn--next">
+                                <svg width="12" height="12" aria-hidden="true" class="icon-slider-arrow-right">
+                                    <use xlink:href="#slider-arrow-right" />
+                                </svg>
+                                <span class="slider-arrows__btn-progress">
+                                    <svg width="200" height="200" viewBox="0 0 200 200"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cy="100" cx="100" r="80" fill="transparent" stroke="white"
+                                            stroke-opacity="1" stroke-width="12" stroke-linecap="round">
+                                        </circle>
+                                        <circle cy="100" cx="100" r="80" fill="transparent" stroke="white"
+                                            stroke-width="12" stroke-dasharray="500" stroke-linecap="round">
+                                        </circle>
+                                    </svg>
+                                </span>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="next-page">
+
+    <div class="container">
+        <a href="#" class="next-page__panel">
+            <div class="next-page__bg">
+                <img data-src="img/next-page.jpg" alt="" class="next-page__bg-image lazyload">
+            </div>
+            <div class="next-page__panel-text">
+                Безопасность, охрана труда и экология
+            </div>
+            <div class="next-page__panel-arrow">
+                <svg width="24" height="24" aria-hidden="true" class="icon-next-arrow">
+                    <use xlink:href="#next-arrow" />
+                </svg>
+            </div>
+        </a>
+    </div>
+</section>
+
+{{/content}}
+{{/extend}}
