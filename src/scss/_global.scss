@@ -45,6 +45,8 @@ html {
     }
     @include breakpoint(small-tablet) {
         font-size: 5.8px;
+
+        
     }
 
     @include breakpoint(mobile) {

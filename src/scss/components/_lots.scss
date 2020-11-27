@@ -142,6 +142,12 @@
         width: 100%;
     }
 
+
+    @include breakpoint(small-tablet) {
+        width: 32rem;
+    }
+   
+
     @include breakpoint(mobile) {
         width: 100%;
         flex-shrink: 1;
@@ -241,6 +247,10 @@
     width: 60%;
     padding-right: 5.4rem;
     border-right: 1px solid #d1d7e5;
+
+    @include breakpoint(small-tablet) {
+        padding-right: 2rem;
+    }
     @include breakpoint(mobile) {
         border: none;
         padding: 0;
@@ -255,6 +265,9 @@
     padding-left: 5.4rem;
     display: flex;
     flex-direction: column;
+    @include breakpoint(small-tablet) {
+        padding-left: 2rem;
+    }
     @include breakpoint(mobile) {
         width: 100%;
         padding: 0;

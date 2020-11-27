@@ -41,6 +41,10 @@
 
     &--license {
         max-width: 50rem;
+        justify-content: center;
+        @include breakpoint(mobile) {
+            max-width: none;
+        }
     }
     @include breakpoint(mobile) {
         margin: 0;
@@ -48,6 +52,7 @@
         padding: 2rem var(--content-padding);
         display: flex;
         flex-direction: column;
+        flex-grow: 1;
     }
 }
 

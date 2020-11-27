@@ -22,6 +22,9 @@ import FileUpload from './fileUpload';
 import AnchorLinks from './anchorLinks';
 import DirectionGallery from './directionGallery';
 import ReviewsSlider from './reviewsSlider';
+import PressPopularsSlider from './pressPopularsSlider';
+import LoadNews from './loadNews';
+import ScrollableTable from './scrollableTable';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -48,6 +51,9 @@ document.addEventListener('DOMContentLoaded', function() {
     AnchorLinks();
     DirectionGallery();
     ReviewsSlider();
+    PressPopularsSlider();
+    LoadNews();
+    ScrollableTable();
 });
 
 window.addEventListener('load', function() {

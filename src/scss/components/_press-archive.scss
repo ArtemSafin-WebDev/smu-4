@@ -1,0 +1,97 @@
+.press-archive {
+    margin-top: 11rem;
+    margin-bottom: 11rem;
+
+    @include breakpoint(mobile) {
+        margin: 4rem 0;
+    }
+}
+
+
+.press-archive__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.press-archive__list-item {
+    width: 33.33%;
+    border: 1px solid transparent;
+  
+    display: flex;
+    flex-direction: column;
+
+   
+
+    @include breakpointMF(small-tablet) {
+        border-right: 1px solid #EBEBEB;
+        border-bottom: 1px solid #EBEBEB;
+        &:nth-child(-n+3) {
+            border-top: 1px solid #EBEBEB;
+        }
+    
+        &:nth-child(3n + 1) {
+            border-left: 1px solid #EBEBEB;
+        }
+    }
+
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        border: 1px solid #EBEBEB;
+        border-top: 1px solid transparent;
+
+        &:first-child {
+            border-top: 1px solid #EBEBEB;
+        }
+    }
+}
+
+
+.press-archive__pagination {
+    margin-top: 4rem;
+
+    @include breakpoint(mobile) {
+        margin-top: 3rem;
+    }
+}
+
+
+.press-archive__pagination-prev-next {
+    @include visuallyHidden();
+}
+
+.press-archive__loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3.7rem;
+    svg {
+        display: block;
+        width: 3.2rem;
+        height: 3.2rem;
+        flex-shrink: 0;
+        animation-name: loader-spinning;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+}
+
+@keyframes loader-spinning {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+
+.press-archive__loading-error {
+    text-align: center;
+    color: var(--primary-color);
+    font-family: var(--din);
+    margin-top: 3.7rem;
+}

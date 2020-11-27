@@ -20,9 +20,17 @@
         margin: 0;
         flex-grow: 1;
         overflow: visible;
+        display: flex;
+        flex-direction: column;
         @include breakpoint(mobile) {
             flex-grow: 0;
         }
+    }
+
+
+    .swiper-wrapper {
+        height: auto;
+        flex-grow: 1;
     }
 
     .swiper-slide {

@@ -3,16 +3,22 @@
         <div class="page-header__row">
             <div class="page-header__left-col">
                 <a href="#" class="page-header__logo">
+                    {{#if darkHeader}}
+                    <img src="img/dark-logo.png" alt="Логотип" class="page-header__logo-image" width="52">
+                    <img src="img/SMU-4-dark.svg" alt="" class="page-header__logo-text-image" width="78">
+                    {{else}}
                     <img src="img/logo.png" alt="Логотип" class="page-header__logo-image" width="52">
                     <img src="img/SMU-4.svg" alt="" class="page-header__logo-text-image" width="78">
-                   
+                    {{/if}}
+
+
                 </a>
                 <div class="page-header__language">
                     <a href="#" class="page-header__language-link active">
                         RU
                     </a>
                     <span class="page-header__language-divider">
-                        
+
                     </span>
                     <a href="#" class="page-header__language-link">
                         EN

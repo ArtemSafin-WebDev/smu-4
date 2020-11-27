@@ -5,6 +5,10 @@
     width: 100%;
     left: 0;
 
+    .dark-header & {
+        color: black;
+    }
+
     @include breakpoint(mobile) {
         top: 2.5rem;
     }
@@ -92,7 +96,8 @@
     display: flex;
     align-items: center;
     @include breakpoint(mobile) {
-        position: relative;bottom: .2rem;
+        position: relative;
+        bottom: 0.2rem;
     }
 }
 
@@ -107,9 +112,13 @@
         color: rgba(255, 255, 255, 0.5);
     }
 
+   
+
     &.active {
         color: white;
     }
+
+   
 
     &:not(.active) {
         &:hover {
@@ -117,9 +126,33 @@
         }
     }
 
+   
+
     @include breakpoint(mobile) {
         font-size: 2rem;
         line-height: 3rem;
+    }
+}
+
+
+.page-header__language-link {
+    .dark-header & {
+        color: rgba(0, 0, 0, 0.5);
+
+        &:link,
+        &:visited {
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        &.active {
+            color: black;
+        }
+
+        &:not(.active) {
+            &:hover {
+                color: rgba(0, 0, 0, 0.7);
+            }
+        }
     }
 }
 
@@ -136,6 +169,13 @@
     height: 2rem;
     width: 1px;
     transform: rotate(24deg);
+   
+}
+
+.page-header__language-divider {
+    .dark-header & {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
 }
 
 .page-header__open-menu {
@@ -143,7 +183,7 @@
 
     .no-touch &:hover {
         .page-header__open-menu-content > span {
-            background-color: rgba(white, .7);
+            opacity: 0.7;
         }
     }
 
@@ -163,7 +203,7 @@
         margin-bottom: 0.8rem;
         transform-origin: left center;
         display: block;
-        transition: background-color .2s;
+        transition: background-color 0.2s, opacity 0.2s;
         &:last-child {
             margin-bottom: 0;
         }
@@ -177,10 +217,12 @@
             transform: scaleX(0.5);
         }
 
-
         @include breakpoint(mobile) {
-
         }
+    }
+
+    .dark-header & > span {
+        background-color: black;
     }
 }
 
@@ -205,3 +247,13 @@
     }
 }
 
+.dark-header .page-header__phone {
+    &:link,
+    &:visited {
+        color: black;
+    }
+
+    &:hover {
+        color: var(--primary-color);
+    }
+}

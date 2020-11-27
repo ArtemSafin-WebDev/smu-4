@@ -1,0 +1,156 @@
+.experience {
+    margin: 11rem 0;
+
+    @include breakpoint(mobile) {
+        margin: 4rem 0;
+    }
+}
+
+.experience__heading {
+    margin-bottom: 5rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
+}
+
+.experience__table-wrapper {
+    width: 100%;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    color: black;
+    padding-bottom: 7rem;
+
+    @include breakpoint(mobile) {
+        padding-bottom: 0;
+    }
+    table {
+        min-width: 100%;
+        width: auto;
+        margin: 0;
+
+        th,
+        td {
+            padding-right: 4.2rem;
+            min-width: 26rem;
+            background: #f6f6f6;
+
+            @include breakpoint(mobile) {
+                padding-right: 3.2rem;
+            }
+            &:first-child {
+                padding-left: 4.2rem;
+                @include breakpoint(mobile) {
+                    padding-left: 3.2rem;
+                }
+            }
+        }
+
+        thead {
+            th {
+                font-weight: bold;
+                font-size: 1.8rem;
+                line-height: 2.3rem;
+                font-family: var(--din);
+                padding-bottom: 2.5rem;
+
+                color: #1b377f;
+                padding-top: 4.2rem;
+                position: relative;
+                @include breakpoint(mobile) {
+                    padding-top: 3rem;
+                    padding-bottom: 2rem;
+                }
+                &::before {
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    background-color: rgba(0, 0, 0, 0.08);
+                    height: 1px;
+
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                }
+
+                &:first-child {
+                    &::before {
+                        left: 4.2rem;
+                        @include breakpoint(mobile) {
+                            left: 3.2rem;
+                        }
+                    }
+                }
+
+                &:last-child {
+                    &::before {
+                        right: 4.2rem;
+                        @include breakpoint(mobile) {
+                            right: 3.2rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        tbody {
+            th {
+                font-weight: 500;
+                font-size: 1.6rem;
+                line-height: 2rem;
+                font-family: var(--din);
+            }
+
+            td {
+                font-size: 1.6rem;
+                line-height: 2rem;
+                font-family: var(--din);
+            }
+
+            th,
+            td {
+                padding-top: 3.5rem;
+
+                @include breakpoint(mobile) {
+                    padding-top: 2.6rem;
+                }
+            }
+
+            tr {
+                &:last-child {
+                    th,
+                    td {
+                        padding-bottom: 7.5rem;
+                        @include breakpoint(mobile) {
+                            padding-bottom: 5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &::-webkit-scrollbar {
+        background-color: rgba(0, 0, 0, 0.08);
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--primary-color);
+    }
+    &::-webkit-scrollbar-button {
+        display: none;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: rgba(0, 0, 0, 0.08);
+    }
+
+    @include breakpoint(mobile) {
+        width: auto;
+        padding-left: var(--content-padding);
+       
+        margin: 0 calc(-1 * var(--content-padding));
+
+        @include noScrollbar();
+    }
+}
