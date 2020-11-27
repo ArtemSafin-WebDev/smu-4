@@ -4668,6 +4668,8 @@ textarea.page-footer__contact-us-form-input {
       padding-top: 12rem;
       padding-bottom: 5rem;
       min-height: auto; } }
+  .page-intro--no-min-height {
+    min-height: auto; }
   .page-intro--press {
     padding: 18rem 0;
     min-height: 46rem; }
@@ -9824,6 +9826,11 @@ textarea.page-footer__contact-us-form-input {
   margin-bottom: 2.5rem;
   font-weight: 400;
   font-family: var(--din); }
+  .press-detail__share-title--large {
+    font-size: 2.8rem;
+    line-height: 3.8rem;
+    text-transform: uppercase;
+    font-family: var(--oswald); }
   @media only screen and (max-width: 767px) {
     .press-detail__share-title {
       margin-bottom: 1.4rem; } }
@@ -9866,7 +9873,7 @@ textarea.page-footer__contact-us-form-input {
       font-size: 1.8rem;
       line-height: 2.2rem; } }
   .press-detail__content p {
-    margin-bottom: 5rem; }
+    margin-bottom: 4rem; }
     @media only screen and (max-width: 767px) {
       .press-detail__content p {
         margin-bottom: 3rem; } }
@@ -9880,6 +9887,14 @@ textarea.page-footer__contact-us-form-input {
       .press-detail__content strong {
         font-size: 2.2rem;
         line-height: 1.2; } }
+  .press-detail__content a {
+    border-bottom: 1px solid rgba(255, 96, 0, 0.3);
+    -webkit-transition: border-color 0.2s;
+    transition: border-color 0.2s; }
+    .press-detail__content a:link, .press-detail__content a:visited {
+      color: var(--primary-color); }
+    .press-detail__content a:hover {
+      border-color: var(--primary-color); }
   .press-detail__content h1,
   .press-detail__content h2,
   .press-detail__content h3,
@@ -9902,7 +9917,7 @@ textarea.page-footer__contact-us-form-input {
         font-size: 2.6rem;
         line-height: 1.3; } }
   .press-detail__content figure {
-    margin-bottom: 5rem; }
+    margin-bottom: 4rem; }
     @media only screen and (max-width: 767px) {
       .press-detail__content figure {
         margin-bottom: 3rem; } }
@@ -9923,15 +9938,21 @@ textarea.page-footer__contact-us-form-input {
           font-size: 1.6rem;
           line-height: 1.2;
           margin-top: 1.8rem; } }
+  .press-detail__content b {
+    font-weight: 500; }
+  .press-detail__content em {
+    font-weight: 500;
+    color: var(--primary-color);
+    font-style: normal; }
   .press-detail__content ul {
-    margin-bottom: 5rem; }
+    margin-bottom: 4rem; }
     @media only screen and (max-width: 767px) {
       .press-detail__content ul {
         margin-bottom: 3rem; } }
     .press-detail__content ul:last-child {
       margin-bottom: 0; }
     .press-detail__content ul li {
-      margin-bottom: 5rem;
+      margin-bottom: 4rem;
       padding-left: 5rem;
       position: relative; }
       @media only screen and (max-width: 767px) {
@@ -9951,7 +9972,7 @@ textarea.page-footer__contact-us-form-input {
         background-position: center; }
         @media only screen and (max-width: 767px) {
           .press-detail__content ul li::before {
-            top: .2rem; } }
+            top: 0.2rem; } }
       .press-detail__content ul li:last-child {
         margin-bottom: 0; }
   .press-detail__content blockquote {
@@ -10049,6 +10070,48 @@ textarea.page-footer__contact-us-form-input {
   font-style: italic;
   display: block;
   font-weight: 400; }
+
+.grey-bg {
+  position: relative;
+  padding: 8rem 0;
+  z-index: 1;
+  margin: 8rem 0; }
+  @media only screen and (max-width: 767px) {
+    .grey-bg {
+      margin: 4rem 0;
+      padding: 4rem 0; } }
+  .grey-bg:last-child {
+    margin-bottom: 0; }
+  .grey-bg:first-child {
+    margin-top: 0; }
+  .grey-bg::before {
+    content: '';
+    position: absolute;
+    left: calc(((100vw - 100% - 36rem) / 2 * -1) - 36rem);
+    width: 100vw;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: #f6f6f6; }
+    @media only screen and (max-width: 767px) {
+      .grey-bg::before {
+        left: calc((100vw - 100%) / 2 * -1); } }
+
+.important-info {
+  margin: 8rem 0;
+  margin-left: -36rem;
+  font-weight: 500;
+  font-size: 3.7rem;
+  line-height: 4.6rem;
+  color: var(--primary-color); }
+  @media only screen and (max-width: 767px) {
+    .important-info {
+      margin: 3rem 0;
+      font-size: 2.2rem;
+      line-height: 1.3; } }
+  .important-info:last-child {
+    margin-bottom: 0; }
 
 .experience {
   margin: 11rem 0; }
