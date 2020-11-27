@@ -30,7 +30,9 @@
             {{/block}}
 
         </main>
-        {{> footer }}
+        {{#unless noFooter}}
+            {{> footer }}
+        {{/unless}}
         {{> modals }}
         {{> menu }}
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARSAFafQFEYWEZvA02Nc6PE--Vv9gT8OE"
