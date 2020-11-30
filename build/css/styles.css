@@ -10617,6 +10617,9 @@ textarea.page-footer__contact-us-form-input {
   background: #f6f6f6;
   padding-bottom: 12.6rem;
   padding-top: 7rem; }
+  @media only screen and (max-width: 767px) {
+    .mission {
+      padding: 4rem 0; } }
 
 .mission__row {
   display: -webkit-box;
@@ -10625,15 +10628,34 @@ textarea.page-footer__contact-us-form-input {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
+  @media only screen and (max-width: 767px) {
+    .mission__row {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: initial;
+          -ms-flex-pack: initial;
+              justify-content: initial; } }
 
 .mission__left-col {
   width: 85rem;
   margin-right: 7rem; }
+  @media only screen and (max-width: 767px) {
+    .mission__left-col {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 3rem; } }
 
 .mission__right-col {
   width: 36.4rem;
   -ms-flex-negative: 0;
       flex-shrink: 0; }
+  @media only screen and (max-width: 767px) {
+    .mission__right-col {
+      width: 100%;
+      -ms-flex-negative: 1;
+          flex-shrink: 1; } }
 
 .mission__achievements-item {
   margin-bottom: 5.4rem; }
@@ -10646,6 +10668,9 @@ textarea.page-footer__contact-us-form-input {
     margin-bottom: 1.4rem; }
   .mission__achievements-item:last-child {
     margin-bottom: 0; }
+  @media only screen and (max-width: 767px) {
+    .mission__achievements-item {
+      margin-bottom: 3rem; } }
 
 .mission__achievements-item-key {
   font-size: 5.2rem;
@@ -10653,12 +10678,19 @@ textarea.page-footer__contact-us-form-input {
   margin-bottom: 0.6rem;
   color: #1b377f;
   text-transform: uppercase; }
+  @media only screen and (max-width: 767px) {
+    .mission__achievements-item-key {
+      font-size: 3.2rem; } }
 
 .mission__achievements-item-value {
   font-size: 2rem;
   line-height: 2.2rem;
   font-family: var(--din);
   color: black; }
+  @media only screen and (max-width: 767px) {
+    .mission__achievements-item-value {
+      font-size: 1.6rem;
+      line-height: 1.2; } }
 
 .mission__intro {
   font-size: 2.5rem;
@@ -10670,6 +10702,14 @@ textarea.page-footer__contact-us-form-input {
     line-height: 4.5rem;
     font-style: normal;
     color: var(--primary-color); }
+    @media only screen and (max-width: 767px) {
+      .mission__intro em {
+        font-size: 1.8rem;
+        line-height: 2.2rem; } }
+  @media only screen and (max-width: 767px) {
+    .mission__intro {
+      font-size: 1.8rem;
+      line-height: 2.2rem; } }
 
 .history {
   position: relative;
@@ -10720,6 +10760,15 @@ textarea.page-footer__contact-us-form-input {
   display: -ms-flexbox;
   display: flex;
   min-height: 70rem; }
+  @media only screen and (max-width: 767px) {
+    .history__row {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      min-height: auto;
+      padding-bottom: 4rem;
+      min-height: 50rem; } }
 
 .history__left-col {
   width: 20rem;
@@ -10732,6 +10781,12 @@ textarea.page-footer__contact-us-form-input {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
+  @media only screen and (max-width: 767px) {
+    .history__left-col {
+      width: 100%;
+      -ms-flex-negative: 1;
+          flex-shrink: 1;
+      padding-bottom: 3rem; } }
 
 .history__right-col {
   width: 50%;
@@ -10748,6 +10803,13 @@ textarea.page-footer__contact-us-form-input {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
+  @media only screen and (max-width: 767px) {
+    .history__right-col {
+      width: 100%;
+      -webkit-box-flex: 0;
+          -ms-flex-positive: 0;
+              flex-grow: 0;
+      padding: 0; } }
 
 .history__years {
   -webkit-box-flex: 1;
@@ -10776,6 +10838,14 @@ textarea.page-footer__contact-us-form-input {
     transition: background-color 0.2s; }
   .blue-bg .history__years::after {
     background-color: rgba(255, 255, 255, 0.3); }
+  @media only screen and (max-width: 767px) {
+    .history__years::after {
+      bottom: 2rem;
+      left: calc(-1 * var(--content-padding));
+      right: calc(-1 * var(--content-padding));
+      width: auto;
+      height: 1px;
+      top: auto; } }
 
 .history__years-inner {
   position: absolute;
@@ -10808,6 +10878,34 @@ textarea.page-footer__contact-us-form-input {
     background-color: transparent; }
   .history__years-inner::-webkit-scrollbar-thumb {
     background-color: transparent; }
+  @media only screen and (max-width: 767px) {
+    .history__years-inner {
+      overflow: auto;
+      overflow-y: hidden;
+      padding: 0;
+      width: auto;
+      -webkit-box-flex: 0;
+          -ms-flex-positive: 0;
+              flex-grow: 0;
+      position: relative;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+      top: auto;
+      left: auto;
+      margin: 0 calc(-1 * var(--content-padding));
+      padding: 0 var(--content-padding);
+      padding-bottom: 4rem;
+      padding-top: 4rem; }
+      .history__years-inner::after {
+        content: '';
+        width: var(--content-padding);
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+        height: 1px; } }
 
 .history__years-marker {
   position: absolute;
@@ -10821,6 +10919,14 @@ textarea.page-footer__contact-us-form-input {
   transition: background-color 0.2s; }
   .blue-bg .history__years-marker {
     background-color: #fff; }
+  @media only screen and (max-width: 767px) {
+    .history__years-marker {
+      height: 2rem;
+      width: 1px;
+      top: auto;
+      right: auto;
+      left: 0;
+      bottom: 1rem; } }
 
 .history__years-link {
   color: #e2e2e2;
@@ -10849,6 +10955,17 @@ textarea.page-footer__contact-us-form-input {
   .history__years-link:last-of-type {
     margin-bottom: 0;
     margin-bottom: auto; }
+  @media only screen and (max-width: 767px) {
+    .history__years-link {
+      font-size: 2.8rem;
+      line-height: 1.2;
+      white-space: nowrap;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+      margin: 0;
+      margin-right: 2.5rem; }
+      .history__years-link:last-child {
+        margin-right: 0; } }
 
 .history__items {
   position: relative;
@@ -10894,6 +11011,15 @@ textarea.page-footer__contact-us-form-input {
     z-index: 2;
     -webkit-transition: opacity .4s, visibility .4s;
     transition: opacity .4s, visibility .4s; }
+  @media only screen and (max-width: 767px) {
+    .history__item {
+      display: block;
+      -webkit-box-pack: initial;
+          -ms-flex-pack: initial;
+              justify-content: initial;
+      -webkit-box-flex: 0;
+          -ms-flex-positive: 0;
+              flex-grow: 0; } }
 
 .history__item-content {
   display: -webkit-box;
@@ -10902,18 +11028,40 @@ textarea.page-footer__contact-us-form-input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+  @media only screen and (max-width: 767px) {
+    .history__item-content {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: initial;
+          -ms-flex-align: initial;
+              align-items: initial; } }
 
 .history__item-left-col {
   width: 52.5rem;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   margin-right: 4.5rem; }
+  @media only screen and (max-width: 767px) {
+    .history__item-left-col {
+      width: 100%;
+      -ms-flex-negative: 1;
+          flex-shrink: 1;
+      margin: 0;
+      margin-bottom: 3rem; } }
 
 .history__item-right-col {
   width: 30%;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1; }
+  @media only screen and (max-width: 767px) {
+    .history__item-right-col {
+      width: 100%;
+      -webkit-box-flex: 0;
+          -ms-flex-positive: 0;
+              flex-grow: 0; } }
 
 .history__item-year {
   font-size: 24rem;
@@ -10956,11 +11104,24 @@ textarea.page-footer__contact-us-form-input {
         flex-shrink: 0; }
     .history__item-year .divider--white {
       background-color: white; }
+    @media only screen and (max-width: 767px) {
+      .history__item-year .divider {
+        height: 7rem;
+        bottom: -1.5rem;
+        left: -1rem;
+        margin-left: 2rem;
+        margin-right: 0.5rem; } }
   .history__item-year .next-year {
     font-size: 5.4rem;
     line-height: 1; }
     .history__item-year .next-year--white {
       color: white; }
+    @media only screen and (max-width: 767px) {
+      .history__item-year .next-year {
+        font-size: 3rem; } }
+  @media only screen and (max-width: 767px) {
+    .history__item-year {
+      font-size: 12rem; } }
 
 .history__item-text {
   font-size: 2.6rem;
@@ -10974,9 +11135,16 @@ textarea.page-footer__contact-us-form-input {
     background-color: var(--primary-color);
     display: block;
     margin-bottom: 2.4rem; }
+    @media only screen and (max-width: 767px) {
+      .history__item-text::before {
+        margin-bottom: 2rem; } }
   .history__item-text--white {
     color: white; }
   .history__item-text em {
     font-style: normal;
     font-weight: 500;
     color: var(--primary-color); }
+  @media only screen and (max-width: 767px) {
+    .history__item-text {
+      font-size: 1.8rem;
+      line-height: 2.2rem; } }

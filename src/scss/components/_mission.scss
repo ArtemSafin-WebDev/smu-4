@@ -2,21 +2,41 @@
     background: #f6f6f6;
     padding-bottom: 12.6rem;
     padding-top: 7rem;
+
+    @include breakpoint(mobile) {
+        padding: 4rem 0;
+    }
 }
 
 .mission__row {
     display: flex;
     justify-content: space-between;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        justify-content: initial;
+    }
 }
 
 .mission__left-col {
     width: 85rem;
     margin-right: 7rem;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 3rem;
+    }
 }
 
 .mission__right-col {
     width: 36.4rem;
     flex-shrink: 0;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-shrink: 1;
+    }
 }
 
 .mission__achievements-item {
@@ -32,6 +52,10 @@
     &:last-child {
         margin-bottom: 0;
     }
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
 }
 
 .mission__achievements-item-key {
@@ -40,6 +64,10 @@
     margin-bottom: 0.6rem;
     color: #1b377f;
     text-transform: uppercase;
+
+    @include breakpoint(mobile) {
+        font-size: 3.2rem;
+    }
 }
 
 .mission__achievements-item-value {
@@ -47,6 +75,11 @@
     line-height: 2.2rem;
     font-family: var(--din);
     color: black;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
 }
 
 .mission__intro {
@@ -59,5 +92,15 @@
         line-height: 4.5rem;
         font-style: normal;
         color: var(--primary-color);
+
+        @include breakpoint(mobile) {
+            font-size: 1.8rem;
+            line-height: 2.2rem;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
     }
 }

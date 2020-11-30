@@ -47,6 +47,16 @@
 .history__row {
     display: flex;
     min-height: 70rem;
+
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        min-height: auto;
+        padding-bottom: 4rem;
+        min-height: 50rem;
+
+       
+    }
 }
 
 .history__left-col {
@@ -54,6 +64,12 @@
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-shrink: 1;
+        padding-bottom: 3rem;
+    }
 }
 
 .history__right-col {
@@ -64,6 +80,12 @@
     padding-bottom: 5rem;
     display: flex;
     flex-direction: column;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-grow: 0;
+        padding: 0;
+    }
 }
 
 .history__years {
@@ -86,6 +108,18 @@
     .blue-bg &::after {
         background-color: rgba(255, 255, 255, 0.3);
     }
+
+
+    @include breakpoint(mobile) {
+        &::after {
+            bottom: 2rem;
+            left: calc(-1 * var(--content-padding));
+            right: calc(-1 * var(--content-padding));
+            width: auto;
+            height: 1px;
+            top: auto;
+        }
+    }
 }
 
 .history__years-inner {
@@ -104,6 +138,32 @@
     overscroll-behavior: contain;
     @include noScrollbar();
     padding-right: 4rem;
+
+
+    @include breakpoint(mobile) {
+        overflow: auto;
+        overflow-y: hidden;
+        padding: 0;
+        width: auto;
+        flex-grow: 0;
+        position: relative;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        top: auto;
+        left: auto;
+        margin: 0 calc(-1 * var(--content-padding));
+        padding: 0 var(--content-padding);
+        padding-bottom: 4rem;
+        padding-top: 4rem;
+        
+
+        &::after {
+            content: '';
+            width: var(--content-padding);
+            flex-shrink: 0;
+            height: 1px;
+        }
+    }
 }
 
 .history__years-marker {
@@ -118,6 +178,16 @@
 
     .blue-bg & {
         background-color: #fff;
+    }
+
+
+    @include breakpoint(mobile) {
+        height: 2rem;
+        width: 1px;
+        top: auto;
+        right: auto;
+        left: 0;
+        bottom: 1rem;
     }
 }
 
@@ -158,6 +228,21 @@
         margin-bottom: 0;
         margin-bottom: auto;
     }
+
+
+    @include breakpoint(mobile) {
+        font-size: 2.8rem;
+        line-height: 1.2;
+        white-space: nowrap;
+        flex-shrink: 0;
+        margin: 0;
+        margin-right: 2.5rem;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+    }
 }
 
 .history__items {
@@ -190,6 +275,13 @@
         z-index: 2;
         transition: opacity .4s, visibility .4s;
     }
+
+
+    @include breakpoint(mobile) {
+        display: block;
+        justify-content: initial;
+        flex-grow: 0;
+    }
 }
 
 
@@ -198,17 +290,33 @@
 .history__item-content {
     display: flex;
     align-items: center;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: initial;
+    }
 }
 
 .history__item-left-col {
     width: 52.5rem;
     flex-shrink: 0;
     margin-right: 4.5rem;
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-shrink: 1;
+        margin: 0;
+        margin-bottom: 3rem;
+    }
 }
 
 .history__item-right-col {
     width: 30%;
     flex-grow: 1;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-grow: 0;
+    }
 }
 
 .history__item-year {
@@ -252,6 +360,16 @@
         &--white {
             background-color: white;
         }
+
+
+        @include breakpoint(mobile) {
+            height: 7rem;
+            bottom: -1.5rem;
+            left: -1rem;
+            margin-left: 2rem;
+            margin-right: 0.5rem;
+
+        }
     }
 
     .next-year {
@@ -261,6 +379,16 @@
         &--white {
             color: white;
         }
+
+        @include breakpoint(mobile) {
+            font-size: 3rem;
+        }
+    }
+
+
+    @include breakpoint(mobile) {
+        font-size: 12rem;
+        
     }
 }
 
@@ -277,6 +405,10 @@
         background-color: var(--primary-color);
         display: block;
         margin-bottom: 2.4rem;
+
+        @include breakpoint(mobile) {
+            margin-bottom: 2rem;
+        }
     }
     &--white {
         color: white;
@@ -285,5 +417,11 @@
         font-style: normal;
         font-weight: 500;
         color: var(--primary-color);
+    }
+
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
     }
 }

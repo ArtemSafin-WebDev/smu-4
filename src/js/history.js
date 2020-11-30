@@ -1,6 +1,7 @@
 import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { debounce } from 'lodash';
+import { MOBILE_WIDTH } from './constants';
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -23,16 +24,29 @@ export default function History() {
 
         scrollContainer.prepend(marker);
 
+        
+
         const setActiveLink = index => {
             yearsLinks.forEach(link => link.classList.remove('active'));
             const newActiveLink = yearsLinks[index];
             newActiveLink.classList.add('active');
-            const distanceToLink = yearsLinks[index].offsetTop + yearsLinks[index].offsetHeight / 2;
+         
 
-            gsap.to(marker, {
-                duration: 0.4,
-                top: distanceToLink
-            });
+            if (window.matchMedia(`(max-width: ${MOBILE_WIDTH}px)`).matches) {
+                const distanceToLink = yearsLinks[index].offsetLeft + yearsLinks[index].offsetWidth / 2;
+
+                gsap.to(marker, {
+                    duration: 0.4,
+                    left: distanceToLink
+                });
+            } else {
+                const distanceToLink = yearsLinks[index].offsetTop + yearsLinks[index].offsetHeight / 2;
+
+                gsap.to(marker, {
+                    duration: 0.4,
+                    top: distanceToLink
+                });
+            }
 
             activeIndex = index;
 
@@ -55,7 +69,7 @@ export default function History() {
             historyItems.forEach(item => item.classList.remove('active'));
 
             historyItems[index].classList.add('active')
-            console.log(`Distance to link: ${distanceToLink}`, yearsLinks[index]);
+          
         };
 
         setActiveLink(activeIndex);
