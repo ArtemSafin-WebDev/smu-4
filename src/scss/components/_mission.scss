@@ -1,0 +1,63 @@
+.mission {
+    background: #f6f6f6;
+    padding-bottom: 12.6rem;
+    padding-top: 7rem;
+}
+
+.mission__row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mission__left-col {
+    width: 85rem;
+    margin-right: 7rem;
+}
+
+.mission__right-col {
+    width: 36.4rem;
+    flex-shrink: 0;
+}
+
+.mission__achievements-item {
+    margin-bottom: 5.4rem;
+    &::before {
+        content: '';
+        display: block;
+        width: 3rem;
+        height: 3px;
+        background-color: var(--primary-color);
+        margin-bottom: 1.4rem;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.mission__achievements-item-key {
+    font-size: 5.2rem;
+    line-height: 1.2;
+    margin-bottom: 0.6rem;
+    color: #1b377f;
+    text-transform: uppercase;
+}
+
+.mission__achievements-item-value {
+    font-size: 2rem;
+    line-height: 2.2rem;
+    font-family: var(--din);
+    color: black;
+}
+
+.mission__intro {
+    font-size: 2.5rem;
+    line-height: 3.6rem;
+    font-family: var(--din);
+    em {
+        font-weight: 500;
+        font-size: 3.2rem;
+        line-height: 4.5rem;
+        font-style: normal;
+        color: var(--primary-color);
+    }
+}

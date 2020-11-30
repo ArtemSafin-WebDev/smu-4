@@ -26,6 +26,7 @@ import PressPopularsSlider from './pressPopularsSlider';
 import LoadNews from './loadNews';
 import ScrollableTable from './scrollableTable';
 import LoadClientsReviews from './loadClientsReviews';
+import History from './history';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -56,6 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
     LoadNews();
     ScrollableTable();
     LoadClientsReviews();
+    History();
 });
 
 window.addEventListener('load', function() {
