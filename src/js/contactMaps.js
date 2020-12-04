@@ -165,6 +165,7 @@ export default function ContactsMaps() {
     elements.forEach(element => {
         const lat = Number(element.getAttribute('data-lat'));
         const lng = Number(element.getAttribute('data-lng'));
+        const balloonContent = element.getAttribute('data-balloon');
         const pin = element.getAttribute('data-pin');
         const map = new google.maps.Map(element, {
             center: { lat, lng },
@@ -190,9 +191,7 @@ export default function ContactsMaps() {
         });
 
         const infoWindow = new google.maps.InfoWindow({
-            content: `г. Уфа, 
-            ул. Комсомольская, 18
-            450097`,
+            content: balloonContent,
             map,
             maxWidth: 252,
            
