@@ -27,6 +27,7 @@ import LoadNews from './loadNews';
 import ScrollableTable from './scrollableTable';
 import LoadClientsReviews from './loadClientsReviews';
 import History from './history';
+import ProjectsNavigation from './projectsNavigation';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -58,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
     ScrollableTable();
     LoadClientsReviews();
     History();
+    ProjectsNavigation();
 });
 
 window.addEventListener('load', function() {

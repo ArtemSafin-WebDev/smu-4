@@ -7099,6 +7099,8 @@ textarea.page-footer__contact-us-form-input {
 
 .projects__list-item {
   margin-bottom: 2rem; }
+  .projects__list-item.hidden {
+    display: none; }
   .projects__list-item:last-child {
     margin-bottom: 0; }
 
