@@ -19,7 +19,7 @@ export default function RealisedProjects() {
             speed: 800,
             watchSlidesProgress: true,
             // loop: true,
-            loopedSlides: 4,
+            // loopedSlides: 4,
             pagination: {
                 el: element.querySelector('.realised-projects__slider-pagination'),
                 type: 'fraction',
