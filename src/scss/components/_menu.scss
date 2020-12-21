@@ -351,6 +351,9 @@
 .menu__contacts-social-list {
     display: flex;
     align-items: center;
+    @include breakpoint(mobile) {
+        margin-top: 2rem;
+    }
 }
 
 .menu__contacts-social-list-item {

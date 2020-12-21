@@ -1077,8 +1077,8 @@ button.swiper-pagination-bullet {
   --content-padding: 4rem;
   --primary-color: #ff6000;
   --primary-color-hover: #e25701;
-  --oswald: 'Oswald', sans-serif;
-  --din: 'DIN Pro', sans-serif;
+  --oswald: 'Oswald', 'Roboto', sans-serif;
+  --din: 'DIN Pro', 'Roboto', sans-serif;
   --blue: #1b377f;
   --footer-shift-distance: 26.8rem; }
   @media only screen and (max-width: 767px) {
@@ -1429,22 +1429,13 @@ select:-webkit-autofill:focus {
     top: 0; }
   .btn::after {
     bottom: 0; }
-  .btn:hover {
+  .no-touch .btn:hover {
     background-color: transparent;
     color: var(--primary-color); }
-    .btn:hover::before, .btn:hover::after {
+    .no-touch .btn:hover::before, .no-touch .btn:hover::after {
       -webkit-transform: scaleX(1);
               transform: scaleX(1); }
-    .btn:hover .btn__inner-content::before, .btn:hover .btn__inner-content::after {
-      -webkit-transform: scaleY(1);
-              transform: scaleY(1); }
-  .btn:focus-visible {
-    background-color: transparent;
-    color: var(--primary-color); }
-    .btn:focus-visible::before, .btn:focus-visible::after {
-      -webkit-transform: scaleX(1);
-              transform: scaleX(1); }
-    .btn:focus-visible .btn__inner-content::before, .btn:focus-visible .btn__inner-content::after {
+    .no-touch .btn:hover .btn__inner-content::before, .no-touch .btn:hover .btn__inner-content::after {
       -webkit-transform: scaleY(1);
               transform: scaleY(1); }
 
@@ -2010,7 +2001,7 @@ textarea.page-footer__contact-us-form-input {
   transition: background-color 0.2s; }
   .page-footer__contact-us-form-submit .btn__inner-content {
     padding: 2rem 4rem; }
-  .page-footer__contact-us-form-submit:hover {
+  .no-touch .page-footer__contact-us-form-submit:hover {
     background-color: transparent; }
   @media only screen and (max-width: 767px) {
     .page-footer__contact-us-form-submit {
@@ -3398,6 +3389,9 @@ textarea.page-footer__contact-us-form-input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+  @media only screen and (max-width: 767px) {
+    .menu__contacts-social-list {
+      margin-top: 2rem; } }
 
 .menu__contacts-social-list-item {
   margin-right: 1.7rem;
@@ -4839,12 +4833,12 @@ textarea.page-footer__contact-us-form-input {
     margin-bottom: 0; }
   @media only screen and (max-width: 767px) {
     .page-intro__heading {
-      font-size: 4rem;
+      font-size: 3.2rem;
       line-height: 1.2;
       margin-bottom: 1rem; } }
   @media only screen and (max-width: 767px) {
     .page-intro__heading--small-on-mobile {
-      font-size: 3rem;
+      font-size: 2.4rem;
       line-height: 1.2; } }
 
 .page-intro__text {
@@ -7827,7 +7821,14 @@ textarea.page-footer__contact-us-form-input {
   @media only screen and (max-width: 767px) {
     .directions__card {
       padding: 2.2rem;
-      min-height: auto; } }
+      min-height: auto; }
+      .directions__card .directions__card-bg {
+        opacity: 1; }
+      .directions__card .directions__plus::before {
+        opacity: 1; }
+      .directions__card .directions__plus svg {
+        -webkit-transform: scale(0.6);
+                transform: scale(0.6); } }
 
 .directions__card-bg {
   position: absolute;
@@ -8125,7 +8126,9 @@ textarea.page-footer__contact-us-form-input {
     top: -3.5rem; }
     @media only screen and (max-width: 767px) {
       .direction-article__content::before {
-        top: -2.5rem; } }
+        position: static;
+        display: block;
+        margin-bottom: 2.5rem; } }
   .direction-article__content p {
     margin-bottom: 3.2rem; }
     .direction-article__content p:last-child {
@@ -9067,7 +9070,7 @@ textarea.page-footer__contact-us-form-input {
     padding-bottom: 120%; }
     @media only screen and (max-width: 767px) {
       .management__card-image-container::after {
-        padding-bottom: 70%; } }
+        padding-bottom: 100%; } }
 
 .management__card-image {
   position: absolute;
@@ -9176,11 +9179,23 @@ textarea.page-footer__contact-us-form-input {
   transition: color .3s, border-color .3s; }
   .next-page__panel:link, .next-page__panel:visited {
     color: var(--primary-color); }
-  .next-page__panel:hover {
+  .no-touch .next-page__panel:hover {
     border-color: transparent; }
-    .next-page__panel:hover .next-page__panel-text {
+    .no-touch .next-page__panel:hover .next-page__panel-text {
       color: white; }
-    .next-page__panel:hover .next-page__bg {
+    .no-touch .next-page__panel:hover .next-page__bg {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+              clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      opacity: 1;
+      -webkit-transition: opacity .3s, -webkit-clip-path .4s ease .1s;
+      transition: opacity .3s, -webkit-clip-path .4s ease .1s;
+      transition: opacity .3s, clip-path .4s ease .1s;
+      transition: opacity .3s, clip-path .4s ease .1s, -webkit-clip-path .4s ease .1s; }
+  .touch .next-page__panel {
+    border-color: transparent; }
+    .touch .next-page__panel .next-page__panel-text {
+      color: white; }
+    .touch .next-page__panel .next-page__bg {
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
               clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
       opacity: 1;

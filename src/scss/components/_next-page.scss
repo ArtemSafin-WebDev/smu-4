@@ -60,7 +60,20 @@
     }
 
 
-    &:hover {
+    .no-touch &:hover {
+        border-color: transparent;
+        .next-page__panel-text {
+            color: white;
+        }
+
+        .next-page__bg {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            opacity: 1;
+            transition: opacity .3s, clip-path .4s ease .1s;
+        }
+    }
+
+    .touch & {
         border-color: transparent;
         .next-page__panel-text {
             color: white;

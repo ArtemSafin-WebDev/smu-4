@@ -49,7 +49,7 @@
         bottom: 0;
     }
 
-    &:hover {
+    .no-touch &:hover {
         background-color: transparent;
         color: var(--primary-color);
         &::before,
@@ -65,21 +65,21 @@
         }
     }
 
-    &:focus-visible {
-        background-color: transparent;
-        color: var(--primary-color);
-        &::before,
-        &::after {
-            transform: scaleX(1);
-        }
+    // &:focus-visible {
+    //     background-color: transparent;
+    //     color: var(--primary-color);
+    //     &::before,
+    //     &::after {
+    //         transform: scaleX(1);
+    //     }
 
-        .btn__inner-content {
-            &::before,
-            &::after {
-                transform: scaleY(1);
-            }
-        }
-    }
+    //     .btn__inner-content {
+    //         &::before,
+    //         &::after {
+    //             transform: scaleY(1);
+    //         }
+    //     }
+    // }
 }
 
 .btn__inner-content {

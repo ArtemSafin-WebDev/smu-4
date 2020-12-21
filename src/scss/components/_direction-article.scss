@@ -60,8 +60,9 @@
         left: 0;
         top: -3.5rem;
         @include breakpoint(mobile) {
-            
-            top: -2.5rem;
+            position: static;
+            display: block;
+            margin-bottom: 2.5rem;
         }
     }
 

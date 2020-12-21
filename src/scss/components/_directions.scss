@@ -154,6 +154,21 @@
     @include breakpoint(mobile) {
         padding: 2.2rem;
         min-height: auto;
+
+
+        .directions__card-bg {
+            opacity: 1;
+        }
+
+        .directions__plus {
+            &::before {
+                opacity: 1;
+            }
+
+            svg {
+                transform: scale(0.6);
+            }
+        }
     }
 }
 
