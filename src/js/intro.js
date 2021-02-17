@@ -8,7 +8,7 @@ export default function Intro() {
         const bgLayers = Array.from(document.querySelectorAll('.js-intro-bg-layer'));
 
         function setActiveLayer(index) {
-            console.log(`Setting active layer: ${index + 1}`);
+           
 
             bgLayers.forEach(layer => layer.classList.remove('active'));
 
@@ -35,7 +35,7 @@ export default function Intro() {
                     ease: 'easeOut',
                     webkitTextFillColor: 'rgba(255, 255, 255, 0)'
                 });
-                console.log('Mouseleave triggreed');
+              
                 setActiveLayer(null);
             });
             link.addEventListener('click', event => {
@@ -57,6 +57,6 @@ export default function Intro() {
             }
         })
 
-        // setActiveLayer(0);
+        
     });
 }

@@ -28,9 +28,11 @@ import ScrollableTable from './scrollableTable';
 import LoadClientsReviews from './loadClientsReviews';
 import History from './history';
 import ProjectsNavigation from './projectsNavigation';
+
+import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-
+gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -64,8 +66,10 @@ document.addEventListener('DOMContentLoaded', function() {
     History();
     ProjectsNavigation();
 
+    ScrollTrigger.refresh();
+
     document.addEventListener('lazyloaded', function(e){
-        console.log('Lazyloaded image', e.target)
+        // console.log('Lazyloaded image', e.target)
     
         ScrollTrigger.refresh();
     });

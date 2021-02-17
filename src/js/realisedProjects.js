@@ -97,11 +97,11 @@ export default function RealisedProjects() {
         };
 
         slider.on('autoplayStop', () => {
-            console.log('Autoplay stop', slider);
+           
             disableAutoplay();
         });
         slider.on('autoplay', () => {
-            console.log('Autoplay event', slider);
+            
             onAutoPlay();
         });
 

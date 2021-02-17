@@ -97,7 +97,7 @@ export default function Numbers() {
                     return bullets[index];
                 }
             };
-            console.log('Cards', cards);
+           
 
             function setActiveCard(index, initial = false) {
                 if (!cards[index]) {
