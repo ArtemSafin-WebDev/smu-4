@@ -23,6 +23,14 @@
     }
 }
 
+[class*="ymaps-2"][class*="-ground-pane"]  {
+    filter: grayscale(1);
+    -ms-filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+    -moz-filter: grayscale(1);
+    -o-filter: grayscale(1);
+}
+
 html {
     box-sizing: border-box;
     font-size: 10px;

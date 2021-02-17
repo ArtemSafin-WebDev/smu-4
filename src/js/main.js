@@ -30,6 +30,8 @@ import History from './history';
 import ProjectsNavigation from './projectsNavigation';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+
+
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
     detectTouch();
@@ -64,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.addEventListener('lazyloaded', function(e){
         console.log('Lazyloaded image', e.target)
-
+    
         ScrollTrigger.refresh();
     });
 });
